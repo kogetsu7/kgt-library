@@ -41,7 +41,7 @@ jobs:
         git add .
 
         if (git diff --cached --shortstat | grep '[0-9]'); then
-          git commit -m "[auto-formatter] format commit ${GITHUB_SHA}"
+          git commit -m "[auto-verifier] format commit ${GITHUB_SHA}"
           git push origin HEAD:${GITHUB_REF}
         else
           echo "No updated timestamps."
