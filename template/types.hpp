@@ -21,7 +21,5 @@ using u8_t = std::uint_least8_t;
 using u16_t = std::uint_least16_t;
 using u32_t = std::uint_least32_t;
 using u64_t = std::uint_least64_t;
-using u128_t = __uint128_t;
-
-using str = std::string;
+  using u128_t = __uint128_t;
 };  // namespace ku
