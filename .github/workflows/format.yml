@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  format:
+  run:
     runs-on: ${{ vars.RUNNER_IMAGE }}
 
     steps:
