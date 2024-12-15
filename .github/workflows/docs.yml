@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  gen-docs:
+  run:
     runs-on: ${{ vars.RUNNER_IMAGE }}
 
     steps:
