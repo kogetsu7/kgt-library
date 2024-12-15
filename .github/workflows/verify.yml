@@ -165,10 +165,11 @@ jobs:
         sparse-checkout: .verify-helper
 
     - name: Load timestamps
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
-        name: timestamps
         path: .verify-helper/timestamps
+        pattern: timestamps-*
+        merge-multiple: true
 
     - name: Merge timestamps
       working-directory: .verify-helper
