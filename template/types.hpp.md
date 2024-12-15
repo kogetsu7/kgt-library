@@ -2,19 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/macros.hpp
     title: template/macros.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: verify/template/template.test.cpp
     title: verify/template/template.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: '#line 2 "template/types.hpp"
@@ -60,9 +60,6 @@ data:
     using u64_t = std::uint_least64_t;
 
     using u128_t = __uint128_t;
-
-
-    using str = std::string;
 
     };  // namespace ku
 
@@ -111,9 +108,6 @@ data:
 
     using u128_t = __uint128_t;
 
-
-    using str = std::string;
-
     };  // namespace ku
 
     '
@@ -123,8 +117,8 @@ data:
   requiredBy:
   - template/template.hpp
   - template/macros.hpp
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-12-15 11:19:23+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - verify/template/template.test.cpp
 documentation_of: template/types.hpp
