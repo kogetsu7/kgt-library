@@ -1,0 +1,10 @@
+name: cache-clear
+run-name: ${{ github.workflow }} (${{ github.ref_name }})
+
+on: workflow_dispatch
+
+jobs:
+  clear:
+    runs-on: ${{ vars.RUNNER_IMAGE }}
+    steps:
+      - uses: snnaplab/delete-branch-cache-action@v1
