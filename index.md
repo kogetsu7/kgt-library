@@ -61,16 +61,16 @@ data:
         )"
   - name: template
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template/includes.hpp
       title: template/includes.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template/macros.hpp
       title: template/macros.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: template/template.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template/types.hpp
       title: template/types.hpp
   - name: tree
@@ -128,7 +128,7 @@ data:
       title: verify/other/next_combination.test.cpp
   - name: verify/template
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/template/template.test.cpp
       title: verify/template/template.test.cpp
   - name: verify/yosupo
