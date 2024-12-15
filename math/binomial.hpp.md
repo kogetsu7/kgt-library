@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/math/binomial.test.cpp
-    title: test/math/binomial.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: verify/math/binomial.test.cpp
+    title: verify/math/binomial.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Binomial (\u4E8C\u9805\u4FC2\u6570)"
     links:
@@ -62,9 +62,9 @@ data:
   path: math/binomial.hpp
   requiredBy: []
   timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/math/binomial.test.cpp
+  - verify/math/binomial.test.cpp
 documentation_of: math/binomial.hpp
 layout: document
 title: "Binomial (\u4E8C\u9805\u4FC2\u6570)"

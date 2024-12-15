@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/math/matrix.test.cpp
-    title: test/math/matrix.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: verify/math/matrix.test.cpp
+    title: verify/math/matrix.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Matrix (\u884C\u5217)"
     links: []
@@ -89,9 +89,9 @@ data:
   path: math/matrix.hpp
   requiredBy: []
   timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/math/matrix.test.cpp
+  - verify/math/matrix.test.cpp
 documentation_of: math/matrix.hpp
 layout: document
 redirect_from:

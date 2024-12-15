@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/other/next_combination.test.cpp
-    title: test/other/next_combination.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: verify/other/next_combination.test.cpp
+    title: verify/other/next_combination.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Next Combination
     links: []
@@ -40,9 +40,9 @@ data:
   path: other/next_combination.hpp
   requiredBy: []
   timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/other/next_combination.test.cpp
+  - verify/other/next_combination.test.cpp
 documentation_of: other/next_combination.hpp
 layout: document
 redirect_from:

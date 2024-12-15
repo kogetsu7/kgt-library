@@ -1,29 +1,29 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: template/includes.hpp
     title: template/includes.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: template/macros.hpp
     title: template/macros.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: template/types.hpp
     title: template/types.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
-  bundledCode: "#line 1 \"test/template/template.test.cpp\"\n#define PROBLEM \\\n\
+  bundledCode: "#line 1 \"verify/template/template.test.cpp\"\n#define PROBLEM \\\n\
     \    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\n\n\
     #line 2 \"template/template.hpp\"\n\n#line 2 \"template/includes.hpp\"\n\n#if\
     \ defined(DEBUG)\n#define _GLIBCXX_DEBUG\n#endif\n\n#include <bits/stdc++.h>\n\
@@ -53,7 +53,7 @@ data:
     \ \\\n         i >= static_cast<ku::i64_t>(b); i -= static_cast<ku::i64_t>(c))\n\
     #define rrep(...) overload4(__VA_ARGS__, rrep3, rrep2, rrep1)(__VA_ARGS__)\n\n\
     #define all(a) std::begin(a), std::end(a)\n#define rall(a) std::rbegin(a), std::rend(a)\n\
-    #line 6 \"template/template.hpp\"\n\nusing namespace ku;\n#line 5 \"test/template/template.test.cpp\"\
+    #line 6 \"template/template.hpp\"\n\nusing namespace ku;\n#line 5 \"verify/template/template.test.cpp\"\
     \n\nint main() {\n    i64_t s = 0;\n\n    s = 0;\n    rep(i, 10) { s += i; }\n\
     \    assert(s == 45);\n\n    s = 0;\n    rep(i, 0, 10) { s += i; }\n    assert(s\
     \ == 45);\n\n    s = 0;\n    rep(i, 0, 10, 1) { s += i; }\n    assert(s == 45);\n\
@@ -76,15 +76,15 @@ data:
   - template/macros.hpp
   - template/types.hpp
   isVerificationFile: true
-  path: test/template/template.test.cpp
+  path: verify/template/template.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/template/template.test.cpp
+documentation_of: verify/template/template.test.cpp
 layout: document
 redirect_from:
-- /verify/test/template/template.test.cpp
-- /verify/test/template/template.test.cpp.html
-title: test/template/template.test.cpp
+- /verify/verify/template/template.test.cpp
+- /verify/verify/template/template.test.cpp.html
+title: verify/template/template.test.cpp
 ---

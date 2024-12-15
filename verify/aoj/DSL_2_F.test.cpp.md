@@ -1,21 +1,21 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/ordered_map_and_range_query.hpp
     title: Ordered Map and Range Query
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
-  bundledCode: "#line 1 \"test/aoj/DSL_2_H.test.cpp\"\n#define PROBLEM \\\n    \"\
-    https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\n\n// #define\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F
+  bundledCode: "#line 1 \"verify/aoj/DSL_2_F.test.cpp\"\n#define PROBLEM \\\n    \"\
+    https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F\"\n\n// #define\
     \ _GLIBCXX_DEBUG\n#include <bits/stdc++.h>\nusing namespace std;\n\n#line 2 \"\
     data_structure/ordered_map_and_range_query.hpp\"\n\n/**\n * @brief Ordered Map\
     \ and Range Query\n */\ntemplate <class K,\n          bool (*compare)(K, K),\n\
@@ -84,56 +84,56 @@ data:
     \    }\n\n    void apply(int a, int b, F f) {\n        pair<Node*, Node*> s =\
     \ split(root, a);\n        pair<Node*, Node*> t = split(s.second, b - a);\n  \
     \      propagate(t.first, f);\n        root = merge(s.first, merge(t.first, t.second));\n\
-    \    }\n};\n#line 9 \"test/aoj/DSL_2_H.test.cpp\"\n\nusing ll = long long;\nconstexpr\
-    \ ll INF64 = 1LL << 60;\n\nusing K = ll;\nbool compare(K a, K b) { return a <\
-    \ b; }\n\nusing S = ll;\nS op(S a, S b) { return min(a, b); }\nS e() { return\
-    \ INF64; }\n\nusing F = ll;\nS mapping(F f, S a) { return a + f; }\nF composition(F\
-    \ f, F g) { return f + g; }\nF id() { return 0LL; }\n\nint main() {\n    int N,\
-    \ Q;\n    cin >> N >> Q;\n\n    OrderedMapAndRangeQuery<K, compare, S, op, e,\
-    \ F, mapping, composition, id>\n        rbst;\n    rbst.insert(-INF64, 0LL);\n\
-    \    rbst.insert(INF64, 0LL);\n\n    for (; Q--;) {\n        int t;\n        cin\
-    \ >> t;\n        if (t == 0) {\n            int l, r;\n            cin >> l >>\
-    \ r;\n            r++;\n            ll x;\n            cin >> x;\n           \
-    \ if (!rbst.count(l)) {\n                rbst.insert(l, rbst.get(rbst.lower_bound(l)\
-    \ - 1).second);\n            }\n            if (!rbst.count(r)) {\n          \
-    \      rbst.insert(r, rbst.get(rbst.lower_bound(r) - 1).second);\n           \
-    \ }\n            rbst.apply(rbst.lower_bound(l), rbst.lower_bound(r), x);\n  \
-    \      } else {\n            int l, r;\n            cin >> l >> r;\n         \
-    \   r++;\n            S ans = rbst.prod(rbst.upper_bound(l) - 1, rbst.lower_bound(r));\n\
-    \            if (ans == e())\n                cout << 0LL << endl;\n         \
-    \   else\n                cout << ans << endl;\n        }\n    }\n}\n"
-  code: "#define PROBLEM \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\
-    \n\n// #define _GLIBCXX_DEBUG\n#include <bits/stdc++.h>\nusing namespace std;\n\
-    \n#include \"../../data_structure/ordered_map_and_range_query.hpp\"\n\nusing ll\
-    \ = long long;\nconstexpr ll INF64 = 1LL << 60;\n\nusing K = ll;\nbool compare(K\
-    \ a, K b) { return a < b; }\n\nusing S = ll;\nS op(S a, S b) { return min(a, b);\
-    \ }\nS e() { return INF64; }\n\nusing F = ll;\nS mapping(F f, S a) { return a\
-    \ + f; }\nF composition(F f, F g) { return f + g; }\nF id() { return 0LL; }\n\n\
-    int main() {\n    int N, Q;\n    cin >> N >> Q;\n\n    OrderedMapAndRangeQuery<K,\
-    \ compare, S, op, e, F, mapping, composition, id>\n        rbst;\n    rbst.insert(-INF64,\
-    \ 0LL);\n    rbst.insert(INF64, 0LL);\n\n    for (; Q--;) {\n        int t;\n\
-    \        cin >> t;\n        if (t == 0) {\n            int l, r;\n           \
-    \ cin >> l >> r;\n            r++;\n            ll x;\n            cin >> x;\n\
+    \    }\n};\n#line 9 \"verify/aoj/DSL_2_F.test.cpp\"\n\nusing ll = long long;\n\
+    constexpr ll INF32 = (1LL << 31) - 1;\nconstexpr ll INF64 = 1LL << 60;\n\nusing\
+    \ K = ll;\nbool compare(K a, K b) { return a < b; }\n\nusing S = ll;\nS op(S a,\
+    \ S b) { return min(a, b); }\nS e() { return INF32; }\n\nusing F = ll;\nconstexpr\
+    \ F ID = INF64;\nS mapping(F f, S a) {\n    if (f == ID) return a;\n    return\
+    \ f;\n}\nF composition(F f, F g) {\n    if (f == ID) return g;\n    return f;\n\
+    }\nF id() { return ID; }\n\nint main() {\n    int N, Q;\n    cin >> N >> Q;\n\n\
+    \    OrderedMapAndRangeQuery<K, compare, S, op, e, F, mapping, composition, id>\n\
+    \        rbst;\n    rbst.insert(-INF64, e());\n    rbst.insert(INF64, e());\n\n\
+    \    for (; Q--;) {\n        int t;\n        cin >> t;\n        if (t == 0) {\n\
+    \            ll l, r, x;\n            cin >> l >> r >> x;\n            r++;\n\
     \            if (!rbst.count(l)) {\n                rbst.insert(l, rbst.get(rbst.lower_bound(l)\
     \ - 1).second);\n            }\n            if (!rbst.count(r)) {\n          \
     \      rbst.insert(r, rbst.get(rbst.lower_bound(r) - 1).second);\n           \
     \ }\n            rbst.apply(rbst.lower_bound(l), rbst.lower_bound(r), x);\n  \
-    \      } else {\n            int l, r;\n            cin >> l >> r;\n         \
-    \   r++;\n            S ans = rbst.prod(rbst.upper_bound(l) - 1, rbst.lower_bound(r));\n\
-    \            if (ans == e())\n                cout << 0LL << endl;\n         \
-    \   else\n                cout << ans << endl;\n        }\n    }\n}\n"
+    \      } else {\n            ll l, r;\n            cin >> l >> r;\n          \
+    \  r++;\n            cout << rbst.prod(rbst.upper_bound(l) - 1, rbst.lower_bound(r))\n\
+    \                 << endl;\n        }\n    }\n}\n"
+  code: "#define PROBLEM \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F\"\
+    \n\n// #define _GLIBCXX_DEBUG\n#include <bits/stdc++.h>\nusing namespace std;\n\
+    \n#include \"../../data_structure/ordered_map_and_range_query.hpp\"\n\nusing ll\
+    \ = long long;\nconstexpr ll INF32 = (1LL << 31) - 1;\nconstexpr ll INF64 = 1LL\
+    \ << 60;\n\nusing K = ll;\nbool compare(K a, K b) { return a < b; }\n\nusing S\
+    \ = ll;\nS op(S a, S b) { return min(a, b); }\nS e() { return INF32; }\n\nusing\
+    \ F = ll;\nconstexpr F ID = INF64;\nS mapping(F f, S a) {\n    if (f == ID) return\
+    \ a;\n    return f;\n}\nF composition(F f, F g) {\n    if (f == ID) return g;\n\
+    \    return f;\n}\nF id() { return ID; }\n\nint main() {\n    int N, Q;\n    cin\
+    \ >> N >> Q;\n\n    OrderedMapAndRangeQuery<K, compare, S, op, e, F, mapping,\
+    \ composition, id>\n        rbst;\n    rbst.insert(-INF64, e());\n    rbst.insert(INF64,\
+    \ e());\n\n    for (; Q--;) {\n        int t;\n        cin >> t;\n        if (t\
+    \ == 0) {\n            ll l, r, x;\n            cin >> l >> r >> x;\n        \
+    \    r++;\n            if (!rbst.count(l)) {\n                rbst.insert(l, rbst.get(rbst.lower_bound(l)\
+    \ - 1).second);\n            }\n            if (!rbst.count(r)) {\n          \
+    \      rbst.insert(r, rbst.get(rbst.lower_bound(r) - 1).second);\n           \
+    \ }\n            rbst.apply(rbst.lower_bound(l), rbst.lower_bound(r), x);\n  \
+    \      } else {\n            ll l, r;\n            cin >> l >> r;\n          \
+    \  r++;\n            cout << rbst.prod(rbst.upper_bound(l) - 1, rbst.lower_bound(r))\n\
+    \                 << endl;\n        }\n    }\n}\n"
   dependsOn:
   - data_structure/ordered_map_and_range_query.hpp
   isVerificationFile: true
-  path: test/aoj/DSL_2_H.test.cpp
+  path: verify/aoj/DSL_2_F.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/DSL_2_H.test.cpp
+documentation_of: verify/aoj/DSL_2_F.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/DSL_2_H.test.cpp
-- /verify/test/aoj/DSL_2_H.test.cpp.html
-title: test/aoj/DSL_2_H.test.cpp
+- /verify/verify/aoj/DSL_2_F.test.cpp
+- /verify/verify/aoj/DSL_2_F.test.cpp.html
+title: verify/aoj/DSL_2_F.test.cpp
 ---

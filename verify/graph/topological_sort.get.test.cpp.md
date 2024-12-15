@@ -1,21 +1,21 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/topological_sort.hpp
     title: "Topological Sort (\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
       )"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/468
     links:
     - https://yukicoder.me/problems/no/468
-  bundledCode: "#line 1 \"test/graph/topological_sort.get.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"verify/graph/topological_sort.get.test.cpp\"\n#define PROBLEM\
     \ \"https://yukicoder.me/problems/no/468\"\n\n#line 2 \"graph/topological_sort.hpp\"\
     \n\n#include <cassert>\n#include <queue>\n#include <vector>\n\nnamespace ku {\n\
     /**\n * @brief Topological Sort (\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\
@@ -42,11 +42,12 @@ data:
     \n    bool is_dag() const noexcept {\n        assert(init);\n\n        return\
     \ dag;\n    }\n\n    int get(const size_t i) const noexcept {\n        assert(init);\n\
     \        assert(dag);\n        assert(i < n);\n\n        return p[i];\n    }\n\
-    };\n};  // namespace ku\n#line 4 \"test/graph/topological_sort.get.test.cpp\"\n\
-    \n#include <algorithm>\n#include <iostream>\n#include <utility>\n#line 9 \"test/graph/topological_sort.get.test.cpp\"\
-    \n\nint main() {\n    int N, M;\n    std::cin >> N >> M;\n\n    std::vector<std::vector<std::pair<int,\
-    \ int>>> g(N);\n    ku::TopologicalSort ts(N);\n    ku::TopologicalSort ts_inv(N);\n\
-    \n    for (int i = 0; i < M; i++) {\n        int u, v, w;\n        std::cin >>\
+    };\n};  // namespace ku\n#line 4 \"verify/graph/topological_sort.get.test.cpp\"\
+    \n\n#include <algorithm>\n#include <iostream>\n#include <utility>\n#line 9 \"\
+    verify/graph/topological_sort.get.test.cpp\"\n\nint main() {\n    int N, M;\n\
+    \    std::cin >> N >> M;\n\n    std::vector<std::vector<std::pair<int, int>>>\
+    \ g(N);\n    ku::TopologicalSort ts(N);\n    ku::TopologicalSort ts_inv(N);\n\n\
+    \    for (int i = 0; i < M; i++) {\n        int u, v, w;\n        std::cin >>\
     \ u >> v >> w;\n\n        g[u].emplace_back(v, w);\n        ts.add_edge(u, v);\n\
     \        ts_inv.add_edge(v, u);\n    }\n\n    ts.build();\n    ts_inv.build();\n\
     \n    assert(ts.is_dag());\n    assert(ts_inv.is_dag());\n\n    std::vector<int>\
@@ -79,15 +80,15 @@ data:
   dependsOn:
   - graph/topological_sort.hpp
   isVerificationFile: true
-  path: test/graph/topological_sort.get.test.cpp
+  path: verify/graph/topological_sort.get.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/graph/topological_sort.get.test.cpp
+documentation_of: verify/graph/topological_sort.get.test.cpp
 layout: document
 redirect_from:
-- /verify/test/graph/topological_sort.get.test.cpp
-- /verify/test/graph/topological_sort.get.test.cpp.html
-title: test/graph/topological_sort.get.test.cpp
+- /verify/verify/graph/topological_sort.get.test.cpp
+- /verify/verify/graph/topological_sort.get.test.cpp.html
+title: verify/graph/topological_sort.get.test.cpp
 ---

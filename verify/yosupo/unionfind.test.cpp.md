@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/union_find.hpp
     title: Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
     links:
     - https://judge.yosupo.jp/problem/unionfind
-  bundledCode: "#line 1 \"test/yosupo/unionfind.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\
+  bundledCode: "#line 1 \"verify/yosupo/unionfind.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\
     \n\n#include <iostream>\n#include <vector>\nusing namespace std;\n\n#line 2 \"\
     data_structure/union_find.hpp\"\n\nnamespace _UnionFind {\nusing S = bool;\nS\
     \ op(S a, S b) { return a ^ b; }\nS e() { return false; }\n};  // namespace _UnionFind\n\
@@ -35,11 +35,11 @@ data:
     \ {\n                res.emplace_back(mem[i]);\n            }\n        }\n\n \
     \       return res;\n    }\n\n    void set(int x, S v) {\n        val[leader(x)]\
     \ = v;\n\n        return;\n    }\n\n    S get(int x) { return val[leader(x)];\
-    \ }\n};\n#line 8 \"test/yosupo/unionfind.test.cpp\"\n\nint main() {\n    int N,\
-    \ Q;\n    cin >> N >> Q;\n\n    UnionFind uf(N);\n    for (; Q--;) {\n       \
-    \ int t, u, v;\n        cin >> t >> u >> v;\n        if (t == 0) {\n         \
-    \   uf.merge(u, v);\n        } else {\n            cout << (uf.same(u, v) ? 1\
-    \ : 0) << endl;\n        }\n    }\n}\n"
+    \ }\n};\n#line 8 \"verify/yosupo/unionfind.test.cpp\"\n\nint main() {\n    int\
+    \ N, Q;\n    cin >> N >> Q;\n\n    UnionFind uf(N);\n    for (; Q--;) {\n    \
+    \    int t, u, v;\n        cin >> t >> u >> v;\n        if (t == 0) {\n      \
+    \      uf.merge(u, v);\n        } else {\n            cout << (uf.same(u, v) ?\
+    \ 1 : 0) << endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
     \ <iostream>\n#include <vector>\nusing namespace std;\n\n#include \"../../data_structure/union_find.hpp\"\
     \n\nint main() {\n    int N, Q;\n    cin >> N >> Q;\n\n    UnionFind uf(N);\n\
@@ -49,15 +49,15 @@ data:
   dependsOn:
   - data_structure/union_find.hpp
   isVerificationFile: true
-  path: test/yosupo/unionfind.test.cpp
+  path: verify/yosupo/unionfind.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/unionfind.test.cpp
+documentation_of: verify/yosupo/unionfind.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/unionfind.test.cpp
-- /verify/test/yosupo/unionfind.test.cpp.html
-title: test/yosupo/unionfind.test.cpp
+- /verify/verify/yosupo/unionfind.test.cpp
+- /verify/verify/yosupo/unionfind.test.cpp.html
+title: verify/yosupo/unionfind.test.cpp
 ---

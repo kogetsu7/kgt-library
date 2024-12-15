@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/prime_sieve.hpp
     title: "Prime Sieve (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/106
     links:
     - https://yukicoder.me/problems/no/106
-  bundledCode: "#line 1 \"test/math/prime_sieve.test.cpp\"\n#define PROBLEM \"https://yukicoder.me/problems/no/106\"\
+  bundledCode: "#line 1 \"verify/math/prime_sieve.test.cpp\"\n#define PROBLEM \"https://yukicoder.me/problems/no/106\"\
     \n\n#line 2 \"math/prime_sieve.hpp\"\n\n#include <algorithm>\n#include <array>\n\
     #include <cassert>\n#include <utility>\n#include <vector>\n\nnamespace ku {\n\
     /**\n * @brief Prime Sieve (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\
@@ -43,7 +43,7 @@ data:
     \n                for (unsigned j = 0; j < te.second; j++) {\n               \
     \     m *= te.first;\n                    res.emplace_back(res[i] * m);\n    \
     \            }\n            }\n        }\n\n        std::sort(res.begin(), res.end());\n\
-    \n        return res;\n    }\n};\n};  // namespace ku\n#line 4 \"test/math/prime_sieve.test.cpp\"\
+    \n        return res;\n    }\n};\n};  // namespace ku\n#line 4 \"verify/math/prime_sieve.test.cpp\"\
     \n\n#include <iostream>\n\nint main() {\n    int N, K;\n    std::cin >> N >> K;\n\
     \n    ku::PrimeSieve ps(N);\n\n    int ans = 0;\n    for (int i = 2; i <= N; i++)\
     \ {\n        auto pf = ps.prime_factors(i);\n\n        if (K <= static_cast<int>(pf.size()))\
@@ -58,15 +58,15 @@ data:
   dependsOn:
   - math/prime_sieve.hpp
   isVerificationFile: true
-  path: test/math/prime_sieve.test.cpp
+  path: verify/math/prime_sieve.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/math/prime_sieve.test.cpp
+documentation_of: verify/math/prime_sieve.test.cpp
 layout: document
 redirect_from:
-- /verify/test/math/prime_sieve.test.cpp
-- /verify/test/math/prime_sieve.test.cpp.html
-title: test/math/prime_sieve.test.cpp
+- /verify/verify/math/prime_sieve.test.cpp
+- /verify/verify/math/prime_sieve.test.cpp.html
+title: verify/math/prime_sieve.test.cpp
 ---

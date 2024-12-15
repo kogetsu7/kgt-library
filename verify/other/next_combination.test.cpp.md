@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: other/next_combination.hpp
     title: Next Combination
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/2561
     links:
     - https://yukicoder.me/problems/no/2561
-  bundledCode: "#line 1 \"test/other/next_combination.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"verify/other/next_combination.test.cpp\"\n#define PROBLEM\
     \ \"https://yukicoder.me/problems/no/2561\"\n\n#line 2 \"other/next_combination.hpp\"\
     \n\n#include <algorithm>\n#include <iterator>\n\nnamespace ku {\n/**\n * @brief\
     \ Next Combination\n */\ntemplate <class I>\nbool NextCombination(const I& begin,\
@@ -26,7 +26,7 @@ data:
     \           }\n\n            std::iter_swap(src, dst);\n            std::rotate(std::next(src,\
     \ 1), std::next(dst, 1), end);\n            std::rotate(sub, std::next(sub, std::distance(dst,\
     \ end) - 1), end);\n\n            return true;\n        }\n    }\n\n    std::rotate(begin,\
-    \ sub, end);\n\n    return false;\n}\n};  // namespace ku\n#line 4 \"test/other/next_combination.test.cpp\"\
+    \ sub, end);\n\n    return false;\n}\n};  // namespace ku\n#line 4 \"verify/other/next_combination.test.cpp\"\
     \n\n#include <iostream>\n#include <numeric>\n#include <vector>\n\nint main() {\n\
     \    int N, K;\n    std::cin >> N >> K;\n    std::vector<long long> A(N);\n  \
     \  for (int i = 0; i < N; i++) {\n        std::cin >> A[i];\n    }\n\n    std::vector<int>\
@@ -49,15 +49,15 @@ data:
   dependsOn:
   - other/next_combination.hpp
   isVerificationFile: true
-  path: test/other/next_combination.test.cpp
+  path: verify/other/next_combination.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/other/next_combination.test.cpp
+documentation_of: verify/other/next_combination.test.cpp
 layout: document
 redirect_from:
-- /verify/test/other/next_combination.test.cpp
-- /verify/test/other/next_combination.test.cpp.html
-title: test/other/next_combination.test.cpp
+- /verify/verify/other/next_combination.test.cpp
+- /verify/verify/other/next_combination.test.cpp.html
+title: verify/other/next_combination.test.cpp
 ---

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/aoj/2426.test.cpp
-    title: test/aoj/2426.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: verify/aoj/2426.test.cpp
+    title: verify/aoj/2426.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Merge Sort Tree
     links: []
@@ -83,9 +83,9 @@ data:
   path: data_structure/merge_sort_tree.hpp
   requiredBy: []
   timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/2426.test.cpp
+  - verify/aoj/2426.test.cpp
 documentation_of: data_structure/merge_sort_tree.hpp
 layout: document
 redirect_from:

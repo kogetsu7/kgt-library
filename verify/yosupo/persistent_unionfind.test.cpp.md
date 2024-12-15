@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/rollback_union_find.hpp
     title: "Rollback Union Find (Rollback\u4ED8\u304DUnion Find)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/persistent_unionfind
     links:
     - https://judge.yosupo.jp/problem/persistent_unionfind
-  bundledCode: "#line 1 \"test/yosupo/persistent_unionfind.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"verify/yosupo/persistent_unionfind.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/persistent_unionfind\"\n\n#include <bits/stdc++.h>\n\
     using namespace std;\n\n#line 2 \"data_structure/rollback_union_find.hpp\"\n\n\
     /**\n * @brief Rollback Union Find (Rollback\u4ED8\u304DUnion Find)\n */\nclass\
@@ -39,10 +39,10 @@ data:
     \ i < n; i++) {\n            member[leader(i)].push_back(i);\n        }\n    \
     \    for (int i = 0; i < n; i++) {\n            if (!member[i].empty()) {\n  \
     \              res.push_back(member[i]);\n            }\n        }\n        return\
-    \ res;\n    }\n};\n#line 7 \"test/yosupo/persistent_unionfind.test.cpp\"\n\nint\
-    \ main() {\n    int N, Q;\n    cin >> N >> Q;\n    vector<vector<int>> g(Q + 1);\n\
-    \    vector<int> t(Q), k(Q), u(Q), v(Q);\n    for (int i = 0; i < Q; i++) {\n\
-    \        cin >> t[i] >> k[i] >> u[i] >> v[i];\n        g[k[i] + 1].push_back(i\
+    \ res;\n    }\n};\n#line 7 \"verify/yosupo/persistent_unionfind.test.cpp\"\n\n\
+    int main() {\n    int N, Q;\n    cin >> N >> Q;\n    vector<vector<int>> g(Q +\
+    \ 1);\n    vector<int> t(Q), k(Q), u(Q), v(Q);\n    for (int i = 0; i < Q; i++)\
+    \ {\n        cin >> t[i] >> k[i] >> u[i] >> v[i];\n        g[k[i] + 1].push_back(i\
     \ + 1);\n    }\n\n    RollbackUnionFind uf(N);\n    vector<bool> ans(Q);\n   \
     \ auto dfs = [&](auto& self, int now) -> void {\n        now--;\n        if (now\
     \ != -1) {\n            if (t[now] == 0) {\n                uf.merge(u[now], v[now]);\n\
@@ -69,15 +69,15 @@ data:
   dependsOn:
   - data_structure/rollback_union_find.hpp
   isVerificationFile: true
-  path: test/yosupo/persistent_unionfind.test.cpp
+  path: verify/yosupo/persistent_unionfind.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/persistent_unionfind.test.cpp
+documentation_of: verify/yosupo/persistent_unionfind.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/persistent_unionfind.test.cpp
-- /verify/test/yosupo/persistent_unionfind.test.cpp.html
-title: test/yosupo/persistent_unionfind.test.cpp
+- /verify/verify/yosupo/persistent_unionfind.test.cpp
+- /verify/verify/yosupo/persistent_unionfind.test.cpp.html
+title: verify/yosupo/persistent_unionfind.test.cpp
 ---

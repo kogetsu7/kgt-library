@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/math/prime_sieve.test.cpp
-    title: test/math/prime_sieve.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: verify/math/prime_sieve.test.cpp
+    title: verify/math/prime_sieve.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Prime Sieve (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
       \u7BE9)"
@@ -77,9 +77,9 @@ data:
   path: math/prime_sieve.hpp
   requiredBy: []
   timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/math/prime_sieve.test.cpp
+  - verify/math/prime_sieve.test.cpp
 documentation_of: math/prime_sieve.hpp
 layout: document
 redirect_from:

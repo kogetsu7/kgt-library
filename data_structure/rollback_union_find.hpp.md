@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/yosupo/persistent_unionfind.test.cpp
-    title: test/yosupo/persistent_unionfind.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: verify/yosupo/persistent_unionfind.test.cpp
+    title: verify/yosupo/persistent_unionfind.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Rollback Union Find (Rollback\u4ED8\u304DUnion Find)"
     links: []
@@ -63,9 +63,9 @@ data:
   path: data_structure/rollback_union_find.hpp
   requiredBy: []
   timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/persistent_unionfind.test.cpp
+  - verify/yosupo/persistent_unionfind.test.cpp
 documentation_of: data_structure/rollback_union_find.hpp
 layout: document
 redirect_from:

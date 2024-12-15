@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/aoj/GRL_3_A.test.cpp
-    title: test/aoj/GRL_3_A.test.cpp
-  - icon: ':x:'
-    path: test/aoj/GRL_3_B.test.cpp
-    title: test/aoj/GRL_3_B.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: verify/aoj/GRL_3_A.test.cpp
+    title: verify/aoj/GRL_3_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/aoj/GRL_3_B.test.cpp
+    title: verify/aoj/GRL_3_B.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Low Link
     links: []
@@ -67,10 +67,10 @@ data:
   path: graph/low_link.hpp
   requiredBy: []
   timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/GRL_3_A.test.cpp
-  - test/aoj/GRL_3_B.test.cpp
+  - verify/aoj/GRL_3_A.test.cpp
+  - verify/aoj/GRL_3_B.test.cpp
 documentation_of: graph/low_link.hpp
 layout: document
 redirect_from:

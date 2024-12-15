@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segment_tree.hpp
     title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tree/heavy_light_decomposition.hpp
     title: "Heavy Light Decomposition (HL\u5206\u89E3)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/vertex_add_path_sum
     links:
     - https://judge.yosupo.jp/problem/vertex_add_path_sum
-  bundledCode: "#line 1 \"test/yosupo/vertex_add_path_sum.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"verify/yosupo/vertex_add_path_sum.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/vertex_add_path_sum\"\n\n#include <bits/stdc++.h>\n\
     using namespace std;\n\n#line 2 \"data_structure/segment_tree.hpp\"\n\n/**\n *\
     \ @brief Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)\n */\ntemplate <class\
@@ -65,8 +65,8 @@ data:
     \ const {\n        assert(init);\n\n        while (true) {\n            if (in[u]\
     \ > in[v]) swap(u, v);\n            func(max(in[u], in[top[v]]), in[v] + 1);\n\
     \            if (top[u] == top[v]) break;\n            v = par[top[v]];\n    \
-    \    }\n    }\n};\n#line 8 \"test/yosupo/vertex_add_path_sum.test.cpp\"\n\nlong\
-    \ long op(long long a, long long b) { return a + b; }\n\nlong long e() { return\
+    \    }\n    }\n};\n#line 8 \"verify/yosupo/vertex_add_path_sum.test.cpp\"\n\n\
+    long long op(long long a, long long b) { return a + b; }\n\nlong long e() { return\
     \ 0LL; }\n\nint main() {\n    int N, Q;\n    cin >> N >> Q;\n    vector<int> A(N);\n\
     \    for (int i = 0; i < N; i++) {\n        cin >> A[i];\n    }\n\n    HeavyLightDecomposition\
     \ hld(N);\n    for (int i = 0; i < N - 1; i++) {\n        int u, v;\n        cin\
@@ -105,15 +105,15 @@ data:
   - data_structure/segment_tree.hpp
   - tree/heavy_light_decomposition.hpp
   isVerificationFile: true
-  path: test/yosupo/vertex_add_path_sum.test.cpp
+  path: verify/yosupo/vertex_add_path_sum.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/vertex_add_path_sum.test.cpp
+documentation_of: verify/yosupo/vertex_add_path_sum.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/vertex_add_path_sum.test.cpp
-- /verify/test/yosupo/vertex_add_path_sum.test.cpp.html
-title: test/yosupo/vertex_add_path_sum.test.cpp
+- /verify/verify/yosupo/vertex_add_path_sum.test.cpp
+- /verify/verify/yosupo/vertex_add_path_sum.test.cpp.html
+title: verify/yosupo/vertex_add_path_sum.test.cpp
 ---

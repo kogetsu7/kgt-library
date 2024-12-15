@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/low_link.hpp
     title: Low Link
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B
-  bundledCode: "#line 1 \"test/aoj/GRL_3_B.test.cpp\"\n#define PROBLEM \\\n    \"\
+  bundledCode: "#line 1 \"verify/aoj/GRL_3_B.test.cpp\"\n#define PROBLEM \\\n    \"\
     https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B\"\n\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n\n#line 2 \"graph/low_link.hpp\"\n\n\
     /**\n * @brief Low Link\n */\nclass LowLink {\n  private:\n    bool init;\n  \
@@ -39,8 +39,8 @@ data:
     \n        return art[v];\n    }\n\n    bool is_art(int v) const {\n        assert(init);\n\
     \n        return 0 < get_art(v);\n    }\n\n    bool is_bridge(int u, int v) const\
     \ {\n        assert(init);\n\n        return bri.count(make_pair(min(u, v), max(u,\
-    \ v)));\n    }\n};\n#line 8 \"test/aoj/GRL_3_B.test.cpp\"\n\nint main() {\n  \
-    \  int N, M;\n    cin >> N >> M;\n    LowLink lo(N);\n    vector<pair<int, int>>\
+    \ v)));\n    }\n};\n#line 8 \"verify/aoj/GRL_3_B.test.cpp\"\n\nint main() {\n\
+    \    int N, M;\n    cin >> N >> M;\n    LowLink lo(N);\n    vector<pair<int, int>>\
     \ edge(M);\n    for (int i = 0; i < M; i++) {\n        int u, v;\n        cin\
     \ >> u >> v;\n        edge[i] = make_pair(min(u, v), max(u, v));\n        lo.add_edge(u,\
     \ v);\n    }\n\n    lo.build();\n\n    vector<pair<int, int>> ans;\n    for (auto\
@@ -60,15 +60,15 @@ data:
   dependsOn:
   - graph/low_link.hpp
   isVerificationFile: true
-  path: test/aoj/GRL_3_B.test.cpp
+  path: verify/aoj/GRL_3_B.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-12-15 15:13:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/GRL_3_B.test.cpp
+documentation_of: verify/aoj/GRL_3_B.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/GRL_3_B.test.cpp
-- /verify/test/aoj/GRL_3_B.test.cpp.html
-title: test/aoj/GRL_3_B.test.cpp
+- /verify/verify/aoj/GRL_3_B.test.cpp
+- /verify/verify/aoj/GRL_3_B.test.cpp.html
+title: verify/aoj/GRL_3_B.test.cpp
 ---
