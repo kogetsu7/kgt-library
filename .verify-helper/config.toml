@@ -1,0 +1,19 @@
+[[languages.cpp.environments]]
+CXX = "g++"
+CXXFLAGS = [
+    "-std=gnu++20",
+    "-O2",
+    "-march=native",
+    "-fsplit-stack",
+    "-fconstexpr-depth=2147483647",
+    "-fconstexpr-ops-limit=2147483647",
+    "-fconstexpr-loop-limit=2147483647",
+    "-Wall",
+    "-Wextra",
+    "-Wshadow",
+    "-Winit-self",
+    "-Wconversion",
+    "-Wlogical-op",
+    "-Wfloat-equal",
+    "-Wold-style-cast"
+]
