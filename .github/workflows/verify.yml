@@ -149,7 +149,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: timestamps-${{ matrix.runs-on }}
+        name: timestamps-${{ matrix.id }}
         path: main/.verify-helper/timestamps-${{ matrix.id }}.json
 
   post-run:
