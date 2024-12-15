@@ -26,19 +26,13 @@ set +e
     echo "Last verify: ${LAST_VERIFY_DATE} (${LAST_VERIFIED_AT})"
     echo "::endgroup::"
 
-    if [ "${LAST_MODIFIED_AT}" -le "${LAST_VERIFIED_AT}" ]; then
-        echo "::notice file=${TARGET}::Already verified. (Test was skipped.)"
-    else
+    if [ "${LAST_MODIFIED_AT}" -gt "${LAST_VERIFIED_AT}" ]; then
         echo "::group::oj-verify run"
 
         oj-verify run "${TARGET}" --tle 30
         EXIT_STATUS=$?
 
         echo "::endgroup::"
-
-        if [ ${EXIT_STATUS} -eq 0 ]; then
-            echo "::notice file=${TARGET}::All tests passed successfully."
-        fi
     fi
 
     echo
