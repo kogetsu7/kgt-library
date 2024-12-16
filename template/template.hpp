@@ -4,4 +4,4 @@
 #include "macros.hpp"
 #include "types.hpp"
 
-using namespace ku;
+using namespace kgt;

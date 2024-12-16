@@ -4,13 +4,14 @@
 #include <type_traits>
 #include <vector>
 
-namespace ku {
+namespace kgt {
 /**
  * @brief Binomial (二項係数)
  * @note 参考: https://blog.hamayanhamayan.com/entry/2018/06/06/210256
  */
 template <class T> class Binomial {
-    static_assert(!std::is_floating_point_v<T>, "T must not be floating point");
+    static_assert(!std::is_floating_point<T>::value,
+                  "T must not be floating point");
 
   private:
     size_t n;
@@ -70,4 +71,4 @@ template <class T> class Binomial {
         return c(a + b - 1, b);
     }
 };
-}  // namespace ku
+}  // namespace kgt

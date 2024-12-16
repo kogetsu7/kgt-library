@@ -8,7 +8,7 @@ int main() {
     int N, K;
     std::cin >> N >> K;
 
-    ku::PrimeSieve ps(N);
+    kgt::PrimeSieve ps(N);
 
     int ans = 0;
     for (int i = 2; i <= N; i++) {

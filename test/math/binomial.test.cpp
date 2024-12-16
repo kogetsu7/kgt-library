@@ -13,7 +13,7 @@ int main() {
 
     atcoder::modint::set_mod(M);
 
-    ku::Binomial<atcoder::modint> bin(std::min(M - 1, 10000000));
+    kgt::Binomial<atcoder::modint> bin(std::min(M - 1, 10000000));
 
     while (T--) {
         int n, k;

@@ -6,7 +6,7 @@
 #include <utility>
 #include <vector>
 
-namespace ku {
+namespace kgt {
 /**
  * @brief Prime Sieve (エラトステネスの篩)
  */
@@ -90,4 +90,4 @@ class PrimeSieve {
         return res;
     }
 };
-};  // namespace ku
+};  // namespace kgt

@@ -10,7 +10,7 @@ int main() {
     std::cin >> a >> b;
 
     long long x, y;
-    ku::ExtendedGCD(a, b, x, y);
+    kgt::ExtendedGCD(a, b, x, y);
 
     std::cout << x << " " << y << "\n";
 

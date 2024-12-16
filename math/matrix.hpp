@@ -4,7 +4,7 @@
 #include <cassert>
 #include <vector>
 
-namespace ku {
+namespace kgt {
 /**
  * @brief Matrix (行列)
  */
@@ -103,4 +103,4 @@ template <class T> class Matrix {
         return res;
     }
 };
-};  // namespace ku
+};  // namespace kgt
