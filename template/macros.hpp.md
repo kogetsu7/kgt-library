@@ -46,9 +46,9 @@ data:
     \                D <= 32,\n                u32_t,\n                typename std::conditional<D\
     \ <= 64, u64_t, u128_t>::type>::\n                type>::type>::type>;\n};  //\
     \ namespace kgt\n#line 4 \"template/macros.hpp\"\n\n#include <iterator>\n\n#if\
-    \ defined(DEBUG) && __has_include(<cpp-dump/cpp-dump.hpp>)\n#include <cpp-dump/cpp-dump.hpp>\n\
-    #define dump(...) cpp_dump(__VA_ARGS__)\n#else\n#define dump(...) ((void)0)\n\
-    #endif\n\n#define overload4(a, b, c, d, e, ...) e\n\n#define rep1(i, a) for (kgt::i64_t\
+    \ defined(DEBUG) && __has_include(<cpp-dump.hpp>)\n#include <cpp-dump.hpp>\n#define\
+    \ dump(...) cpp_dump(__VA_ARGS__)\n#else\n#define dump(...) ((void)0)\n#endif\n\
+    \n#define overload4(a, b, c, d, e, ...) e\n\n#define rep1(i, a) for (kgt::i64_t\
     \ i = 0; i < static_cast<kgt::i64_t>(a); ++i)\n#define rep2(i, a, b)         \
     \                      \\\n    for (kgt::i64_t i = static_cast<kgt::i64_t>(a);\
     \ \\\n         i < static_cast<kgt::i64_t>(b); ++i)\n#define rep3(i, a, b, c)\
@@ -63,13 +63,13 @@ data:
     #define rrep(...) overload4(__VA_ARGS__, rrep3, rrep2, rrep1)(__VA_ARGS__)\n\n\
     #define all(a) std::begin(a), std::end(a)\n#define rall(a) std::rbegin(a), std::rend(a)\n"
   code: "#pragma once\n\n#include \"types.hpp\"\n\n#include <iterator>\n\n#if defined(DEBUG)\
-    \ && __has_include(<cpp-dump/cpp-dump.hpp>)\n#include <cpp-dump/cpp-dump.hpp>\n\
-    #define dump(...) cpp_dump(__VA_ARGS__)\n#else\n#define dump(...) ((void)0)\n\
-    #endif\n\n#define overload4(a, b, c, d, e, ...) e\n\n#define rep1(i, a) for (kgt::i64_t\
-    \ i = 0; i < static_cast<kgt::i64_t>(a); ++i)\n#define rep2(i, a, b)         \
+    \ && __has_include(<cpp-dump.hpp>)\n#include <cpp-dump.hpp>\n#define dump(...)\
+    \ cpp_dump(__VA_ARGS__)\n#else\n#define dump(...) ((void)0)\n#endif\n\n#define\
+    \ overload4(a, b, c, d, e, ...) e\n\n#define rep1(i, a) for (kgt::i64_t i = 0;\
+    \ i < static_cast<kgt::i64_t>(a); ++i)\n#define rep2(i, a, b)                \
+    \               \\\n    for (kgt::i64_t i = static_cast<kgt::i64_t>(a); \\\n \
+    \        i < static_cast<kgt::i64_t>(b); ++i)\n#define rep3(i, a, b, c)      \
     \                      \\\n    for (kgt::i64_t i = static_cast<kgt::i64_t>(a);\
-    \ \\\n         i < static_cast<kgt::i64_t>(b); ++i)\n#define rep3(i, a, b, c)\
-    \                            \\\n    for (kgt::i64_t i = static_cast<kgt::i64_t>(a);\
     \ \\\n         i < static_cast<kgt::i64_t>(b); i += static_cast<kgt::i64_t>(c))\n\
     #define rep(...) overload4(__VA_ARGS__, rep3, rep2, rep1)(__VA_ARGS__)\n\n#define\
     \ rrep1(i, a) for (kgt::i64_t i = static_cast<kgt::i64_t>(a); i >= 0; --i)\n#define\
@@ -85,7 +85,7 @@ data:
   path: template/macros.hpp
   requiredBy:
   - template/template.hpp
-  timestamp: '2024-12-16 17:10:17+09:00'
+  timestamp: '2024-12-16 17:45:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/template/template.test.cpp
