@@ -4,8 +4,8 @@
 
 #include <iterator>
 
-#if defined(DEBUG) && __has_include(<cpp-dump/cpp-dump.hpp>)
-#include <cpp-dump/cpp-dump.hpp>
+#if defined(DEBUG) && __has_include(<cpp-dump.hpp>)
+#include <cpp-dump.hpp>
 #define dump(...) cpp_dump(__VA_ARGS__)
 #else
 #define dump(...) ((void)0)
