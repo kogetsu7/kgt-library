@@ -2,6 +2,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/kogetsu7/ku-library)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kogetsu7/ku-library)
 
-# ku-library
+# kgt-library
 ((┏(^ω^┗)ﾎｲｻﾎｲｻ♪(┓^ω^)┛))ﾖｲｻﾖｲｻ♪<br>
 競技プログラミングのライブラリです
