@@ -12,7 +12,7 @@
   "test/math/matrix.test.cpp": "2024-12-16 15:57:44 +0900",
   "test/math/prime_sieve.test.cpp": "2024-12-16 15:57:44 +0900",
   "test/other/next_combination.test.cpp": "2024-12-16 16:07:21 +0900",
-  "test/template/template.test.cpp": "2024-12-16 17:45:11 +0900",
+  "test/template/template.test.cpp": "2024-12-16 19:18:15 +0900",
   "test/yosupo/lca.test.cpp": "2024-12-16 15:18:39 +0900",
   "test/yosupo/persistent_unionfind.test.cpp": "2024-12-16 15:18:39 +0900",
   "test/yosupo/static_range_min.test.cpp": "2024-12-16 15:18:39 +0900",
