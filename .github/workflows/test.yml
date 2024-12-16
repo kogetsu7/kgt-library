@@ -26,9 +26,6 @@ jobs:
       with:
         sparse-checkout: verify
 
-    - name: Git pull
-      run: git pull
-
     - name: Prepare
       id: preapre
       run: |
@@ -86,10 +83,6 @@ jobs:
         repository: atcoder/ac-library
         path: ac-library
         sparse-checkout: atcoder
-
-    - name: Git pull
-      working-directory: main
-      run: git pull
 
     - name: Assign test files
       working-directory: main
@@ -166,9 +159,6 @@ jobs:
       with:
         fetch-depth: 0
         sparse-checkout: .verify-helper
-
-    - name: Git pull
-      run: git pull
 
     - name: Load timestamps
       uses: actions/download-artifact@v4
