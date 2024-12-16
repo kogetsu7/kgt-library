@@ -14,6 +14,5 @@ CXXFLAGS = [
     "-Winit-self",
     "-Wconversion",
     "-Wlogical-op",
-    "-Wfloat-equal",
-    "-Wold-style-cast"
+    "-Wfloat-equal"
 ]
