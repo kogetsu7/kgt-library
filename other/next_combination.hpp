@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <iterator>
 
-namespace ku {
+namespace kgt {
 /**
  * @brief Next Combination
  */
@@ -37,4 +37,4 @@ bool NextCombination(const I& begin, const I& end, const size_t k) {
 
     return false;
 }
-};  // namespace ku
+};  // namespace kgt

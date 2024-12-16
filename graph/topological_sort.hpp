@@ -4,7 +4,7 @@
 #include <queue>
 #include <vector>
 
-namespace ku {
+namespace kgt {
 /**
  * @brief Topological Sort (トポロジカルソート)
  */
@@ -88,4 +88,4 @@ class TopologicalSort {
         return p[i];
     }
 };
-};  // namespace ku
+};  // namespace kgt

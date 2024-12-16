@@ -28,7 +28,7 @@ int main() {
         if (s2 <= s1) {
             ans = (ans + 1) % 998;
         }
-    } while (ku::NextCombination(id.begin(), id.end(), K));
+    } while (kgt::NextCombination(id.begin(), id.end(), K));
 
     std::cout << ans << "\n";
 

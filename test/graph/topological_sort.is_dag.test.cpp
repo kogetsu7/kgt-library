@@ -9,7 +9,7 @@ int main() {
     int N, M;
     std::cin >> N >> M;
 
-    ku::TopologicalSort ts(N);
+    kgt::TopologicalSort ts(N);
     for (int i = 0; i < M; i++) {
         int u, v;
         std::cin >> u >> v;

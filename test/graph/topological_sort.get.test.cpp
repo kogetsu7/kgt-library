@@ -12,8 +12,8 @@ int main() {
     std::cin >> N >> M;
 
     std::vector<std::vector<std::pair<int, int>>> g(N);
-    ku::TopologicalSort ts(N);
-    ku::TopologicalSort ts_inv(N);
+    kgt::TopologicalSort ts(N);
+    kgt::TopologicalSort ts_inv(N);
 
     for (int i = 0; i < M; i++) {
         int u, v, w;
