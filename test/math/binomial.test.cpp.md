@@ -14,7 +14,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/binomial_coefficient_prime_mod
     links:
     - https://judge.yosupo.jp/problem/binomial_coefficient_prime_mod
-  bundledCode: "#line 1 \"verify/math/binomial.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/binomial_coefficient_prime_mod\"\
+  bundledCode: "#line 1 \"test/math/binomial.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/binomial_coefficient_prime_mod\"\
     \n\n#line 2 \"math/binomial.hpp\"\n\n#include <cassert>\n#include <type_traits>\n\
     #include <vector>\n\nnamespace ku {\n/**\n * @brief Binomial (\u4E8C\u9805\u4FC2\
     \u6570)\n * @note \u53C2\u8003: https://blog.hamayanhamayan.com/entry/2018/06/06/210256\n\
@@ -36,9 +36,9 @@ data:
     \u305B\n    T h(const int a, const int b) const noexcept {\n        if (a == 0\
     \ && b == 0) {\n            return T(1);\n        }\n\n        if (a <= 0 || b\
     \ < 0) {\n            return T(0);\n        }\n\n        return c(a + b - 1, b);\n\
-    \    }\n};\n}  // namespace ku\n#line 4 \"verify/math/binomial.test.cpp\"\n\n\
-    #include <algorithm>\n#include <iostream>\n\n#include <atcoder/modint>\n\nint\
-    \ main() {\n    int T, M;\n    std::cin >> T >> M;\n\n    atcoder::modint::set_mod(M);\n\
+    \    }\n};\n}  // namespace ku\n#line 4 \"test/math/binomial.test.cpp\"\n\n#include\
+    \ <algorithm>\n#include <iostream>\n\n#include <atcoder/modint>\n\nint main()\
+    \ {\n    int T, M;\n    std::cin >> T >> M;\n\n    atcoder::modint::set_mod(M);\n\
     \n    ku::Binomial<atcoder::modint> bin(std::min(M - 1, 10000000));\n\n    while\
     \ (T--) {\n        int n, k;\n        std::cin >> n >> k;\n\n        std::cout\
     \ << bin.c(n, k).val() << \"\\n\";\n    }\n\n    return 0;\n}\n"
@@ -52,15 +52,15 @@ data:
   dependsOn:
   - math/binomial.hpp
   isVerificationFile: true
-  path: verify/math/binomial.test.cpp
+  path: test/math/binomial.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 15:13:21+09:00'
+  timestamp: '2024-12-16 15:18:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/math/binomial.test.cpp
+documentation_of: test/math/binomial.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/math/binomial.test.cpp
-- /verify/verify/math/binomial.test.cpp.html
-title: verify/math/binomial.test.cpp
+- /verify/test/math/binomial.test.cpp
+- /verify/test/math/binomial.test.cpp.html
+title: test/math/binomial.test.cpp
 ---

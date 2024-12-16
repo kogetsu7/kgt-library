@@ -17,7 +17,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/pow_of_matrix
     links:
     - https://judge.yosupo.jp/problem/pow_of_matrix
-  bundledCode: "#line 1 \"verify/math/matrix.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/pow_of_matrix\"\
+  bundledCode: "#line 1 \"test/math/matrix.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/pow_of_matrix\"\
     \n\n#line 2 \"math/matrix.hpp\"\n\n#include <algorithm>\n#include <cassert>\n\
     #include <vector>\n\nnamespace ku {\n/**\n * @brief Matrix (\u884C\u5217)\n */\n\
     template <class T> class Matrix {\n  private:\n    size_t h;\n    size_t w;\n\
@@ -91,7 +91,7 @@ data:
     \ {\n                res *= x;\n            }\n\n            x *= x;\n       \
     \     y >>= 1U;\n        }\n\n        return res;\n    }\n\n    constexpr StaticModInt\
     \ inv() const noexcept { return pow(M - 2); }\n};\n};  // namespace ku\n#line\
-    \ 5 \"verify/math/matrix.test.cpp\"\n\n#include <iostream>\n#line 8 \"verify/math/matrix.test.cpp\"\
+    \ 5 \"test/math/matrix.test.cpp\"\n\n#include <iostream>\n#line 8 \"test/math/matrix.test.cpp\"\
     \n\nint main() {\n    int N;\n    long long K;\n    std::cin >> N >> K;\n    std::vector\
     \ A(N, std::vector<ku::StaticModInt<998244353>>(N));\n    ku::Matrix<ku::StaticModInt<998244353>>\
     \ mat(N);\n    for (int i = 0; i < N; i++) {\n        for (int j = 0; j < N; j++)\
@@ -120,15 +120,15 @@ data:
   - math/matrix.hpp
   - math/static_mod_int.hpp
   isVerificationFile: true
-  path: verify/math/matrix.test.cpp
+  path: test/math/matrix.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 15:13:21+09:00'
+  timestamp: '2024-12-16 15:18:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/math/matrix.test.cpp
+documentation_of: test/math/matrix.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/math/matrix.test.cpp
-- /verify/verify/math/matrix.test.cpp.html
-title: verify/math/matrix.test.cpp
+- /verify/test/math/matrix.test.cpp
+- /verify/test/math/matrix.test.cpp.html
+title: test/math/matrix.test.cpp
 ---

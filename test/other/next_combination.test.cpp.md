@@ -14,7 +14,7 @@ data:
     PROBLEM: https://yukicoder.me/problems/no/2561
     links:
     - https://yukicoder.me/problems/no/2561
-  bundledCode: "#line 1 \"verify/other/next_combination.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"test/other/next_combination.test.cpp\"\n#define PROBLEM\
     \ \"https://yukicoder.me/problems/no/2561\"\n\n#line 2 \"other/next_combination.hpp\"\
     \n\n#include <algorithm>\n#include <iterator>\n\nnamespace ku {\n/**\n * @brief\
     \ Next Combination\n */\ntemplate <class I>\nbool NextCombination(const I& begin,\
@@ -26,7 +26,7 @@ data:
     \           }\n\n            std::iter_swap(src, dst);\n            std::rotate(std::next(src,\
     \ 1), std::next(dst, 1), end);\n            std::rotate(sub, std::next(sub, std::distance(dst,\
     \ end) - 1), end);\n\n            return true;\n        }\n    }\n\n    std::rotate(begin,\
-    \ sub, end);\n\n    return false;\n}\n};  // namespace ku\n#line 4 \"verify/other/next_combination.test.cpp\"\
+    \ sub, end);\n\n    return false;\n}\n};  // namespace ku\n#line 4 \"test/other/next_combination.test.cpp\"\
     \n\n#include <iostream>\n#include <numeric>\n#include <vector>\n\nint main() {\n\
     \    int N, K;\n    std::cin >> N >> K;\n    std::vector<long long> A(N);\n  \
     \  for (int i = 0; i < N; i++) {\n        std::cin >> A[i];\n    }\n\n    std::vector<int>\
@@ -49,15 +49,15 @@ data:
   dependsOn:
   - other/next_combination.hpp
   isVerificationFile: true
-  path: verify/other/next_combination.test.cpp
+  path: test/other/next_combination.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 15:13:21+09:00'
+  timestamp: '2024-12-16 15:18:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/other/next_combination.test.cpp
+documentation_of: test/other/next_combination.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/other/next_combination.test.cpp
-- /verify/verify/other/next_combination.test.cpp.html
-title: verify/other/next_combination.test.cpp
+- /verify/test/other/next_combination.test.cpp
+- /verify/test/other/next_combination.test.cpp.html
+title: test/other/next_combination.test.cpp
 ---

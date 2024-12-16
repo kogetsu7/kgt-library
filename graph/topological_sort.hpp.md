@@ -4,11 +4,11 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/graph/topological_sort.get.test.cpp
-    title: verify/graph/topological_sort.get.test.cpp
+    path: test/graph/topological_sort.get.test.cpp
+    title: test/graph/topological_sort.get.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/graph/topological_sort.is_dag.test.cpp
-    title: verify/graph/topological_sort.is_dag.test.cpp
+    path: test/graph/topological_sort.is_dag.test.cpp
+    title: test/graph/topological_sort.is_dag.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -75,8 +75,8 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/graph/topological_sort.get.test.cpp
-  - verify/graph/topological_sort.is_dag.test.cpp
+  - test/graph/topological_sort.get.test.cpp
+  - test/graph/topological_sort.is_dag.test.cpp
 documentation_of: graph/topological_sort.hpp
 layout: document
 redirect_from:

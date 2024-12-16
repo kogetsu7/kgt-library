@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/math/binomial.test.cpp
-    title: verify/math/binomial.test.cpp
+    path: test/math/binomial.test.cpp
+    title: test/math/binomial.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -64,7 +64,7 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/math/binomial.test.cpp
+  - test/math/binomial.test.cpp
 documentation_of: math/binomial.hpp
 layout: document
 title: "Binomial (\u4E8C\u9805\u4FC2\u6570)"

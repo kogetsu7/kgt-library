@@ -14,7 +14,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/lca
     links:
     - https://judge.yosupo.jp/problem/lca
-  bundledCode: "#line 1 \"verify/yosupo/lca.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\
+  bundledCode: "#line 1 \"test/yosupo/lca.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\
     \n\n#include <bits/stdc++.h>\nusing namespace std;\n\n#line 2 \"tree/heavy_light_decomposition.hpp\"\
     \n\n/**\n * @brief Heavy Light Decomposition (HL\u5206\u89E3)\n */\nclass HeavyLightDecomposition\
     \ {\n  private:\n    bool init;\n    int n;\n    vector<vector<int>> g;\n    vector<int>\
@@ -46,9 +46,9 @@ data:
     \ const {\n        assert(init);\n\n        while (true) {\n            if (in[u]\
     \ > in[v]) swap(u, v);\n            func(max(in[u], in[top[v]]), in[v] + 1);\n\
     \            if (top[u] == top[v]) break;\n            v = par[top[v]];\n    \
-    \    }\n    }\n};\n#line 7 \"verify/yosupo/lca.test.cpp\"\n\nint main() {\n  \
-    \  int N, Q;\n    cin >> N >> Q;\n    HeavyLightDecomposition hld(N);\n    for\
-    \ (int i = 1; i < N; i++) {\n        int p;\n        cin >> p;\n        hld.add_edge(i,\
+    \    }\n    }\n};\n#line 7 \"test/yosupo/lca.test.cpp\"\n\nint main() {\n    int\
+    \ N, Q;\n    cin >> N >> Q;\n    HeavyLightDecomposition hld(N);\n    for (int\
+    \ i = 1; i < N; i++) {\n        int p;\n        cin >> p;\n        hld.add_edge(i,\
     \ p);\n    }\n\n    hld.build();\n\n    for (; Q--;) {\n        int u, v;\n  \
     \      cin >> u >> v;\n        cout << hld.lca(u, v) << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include <bits/stdc++.h>\n\
@@ -61,15 +61,15 @@ data:
   dependsOn:
   - tree/heavy_light_decomposition.hpp
   isVerificationFile: true
-  path: verify/yosupo/lca.test.cpp
+  path: test/yosupo/lca.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 15:13:21+09:00'
+  timestamp: '2024-12-16 15:18:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/yosupo/lca.test.cpp
+documentation_of: test/yosupo/lca.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/yosupo/lca.test.cpp
-- /verify/verify/yosupo/lca.test.cpp.html
-title: verify/yosupo/lca.test.cpp
+- /verify/test/yosupo/lca.test.cpp
+- /verify/test/yosupo/lca.test.cpp.html
+title: test/yosupo/lca.test.cpp
 ---

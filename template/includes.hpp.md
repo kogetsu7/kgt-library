@@ -7,8 +7,8 @@ data:
     title: template/template.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/template/template.test.cpp
-    title: verify/template/template.test.cpp
+    path: test/template/template.test.cpp
+    title: test/template/template.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -70,7 +70,7 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/template/template.test.cpp
+  - test/template/template.test.cpp
 documentation_of: template/includes.hpp
 layout: document
 redirect_from:

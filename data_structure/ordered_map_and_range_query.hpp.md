@@ -4,11 +4,11 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/aoj/DSL_2_F.test.cpp
-    title: verify/aoj/DSL_2_F.test.cpp
+    path: test/aoj/DSL_2_F.test.cpp
+    title: test/aoj/DSL_2_F.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/aoj/DSL_2_H.test.cpp
-    title: verify/aoj/DSL_2_H.test.cpp
+    path: test/aoj/DSL_2_H.test.cpp
+    title: test/aoj/DSL_2_H.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -157,8 +157,8 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/aoj/DSL_2_F.test.cpp
-  - verify/aoj/DSL_2_H.test.cpp
+  - test/aoj/DSL_2_F.test.cpp
+  - test/aoj/DSL_2_H.test.cpp
 documentation_of: data_structure/ordered_map_and_range_query.hpp
 layout: document
 redirect_from:

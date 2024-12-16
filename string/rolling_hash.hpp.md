@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/yosupo/zalgorithm.test.cpp
-    title: verify/yosupo/zalgorithm.test.cpp
+    path: test/yosupo/zalgorithm.test.cpp
+    title: test/yosupo/zalgorithm.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -68,7 +68,7 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/yosupo/zalgorithm.test.cpp
+  - test/yosupo/zalgorithm.test.cpp
 documentation_of: string/rolling_hash.hpp
 layout: document
 redirect_from:

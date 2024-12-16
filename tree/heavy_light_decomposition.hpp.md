@@ -4,14 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/yosupo/lca.test.cpp
-    title: verify/yosupo/lca.test.cpp
+    path: test/yosupo/lca.test.cpp
+    title: test/yosupo/lca.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/yosupo/vertex_add_path_sum.test.cpp
-    title: verify/yosupo/vertex_add_path_sum.test.cpp
+    path: test/yosupo/vertex_add_path_sum.test.cpp
+    title: test/yosupo/vertex_add_path_sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/yosupo/vertex_add_subtree_sum.test.cpp
-    title: verify/yosupo/vertex_add_subtree_sum.test.cpp
+    path: test/yosupo/vertex_add_subtree_sum.test.cpp
+    title: test/yosupo/vertex_add_subtree_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -88,9 +88,9 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/yosupo/lca.test.cpp
-  - verify/yosupo/vertex_add_path_sum.test.cpp
-  - verify/yosupo/vertex_add_subtree_sum.test.cpp
+  - test/yosupo/lca.test.cpp
+  - test/yosupo/vertex_add_path_sum.test.cpp
+  - test/yosupo/vertex_add_subtree_sum.test.cpp
 documentation_of: tree/heavy_light_decomposition.hpp
 layout: document
 redirect_from:

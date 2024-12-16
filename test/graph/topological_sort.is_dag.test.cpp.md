@@ -15,8 +15,8 @@ data:
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_A
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_A
-  bundledCode: "#line 1 \"verify/graph/topological_sort.is_dag.test.cpp\"\n#define\
-    \ PROBLEM \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_A\"\
+  bundledCode: "#line 1 \"test/graph/topological_sort.is_dag.test.cpp\"\n#define PROBLEM\
+    \ \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_A\"\
     \n\n#line 2 \"graph/topological_sort.hpp\"\n\n#include <cassert>\n#include <queue>\n\
     #include <vector>\n\nnamespace ku {\n/**\n * @brief Topological Sort (\u30C8\u30DD\
     \u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8)\n */\nclass TopologicalSort {\n  private:\n\
@@ -42,7 +42,7 @@ data:
     \n    bool is_dag() const noexcept {\n        assert(init);\n\n        return\
     \ dag;\n    }\n\n    int get(const size_t i) const noexcept {\n        assert(init);\n\
     \        assert(dag);\n        assert(i < n);\n\n        return p[i];\n    }\n\
-    };\n};  // namespace ku\n#line 5 \"verify/graph/topological_sort.is_dag.test.cpp\"\
+    };\n};  // namespace ku\n#line 5 \"test/graph/topological_sort.is_dag.test.cpp\"\
     \n\n#include <iostream>\n\nint main() {\n    int N, M;\n    std::cin >> N >> M;\n\
     \n    ku::TopologicalSort ts(N);\n    for (int i = 0; i < M; i++) {\n        int\
     \ u, v;\n        std::cin >> u >> v;\n        ts.add_edge(u, v);\n    }\n\n  \
@@ -57,15 +57,15 @@ data:
   dependsOn:
   - graph/topological_sort.hpp
   isVerificationFile: true
-  path: verify/graph/topological_sort.is_dag.test.cpp
+  path: test/graph/topological_sort.is_dag.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 15:13:21+09:00'
+  timestamp: '2024-12-16 15:18:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/graph/topological_sort.is_dag.test.cpp
+documentation_of: test/graph/topological_sort.is_dag.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/graph/topological_sort.is_dag.test.cpp
-- /verify/verify/graph/topological_sort.is_dag.test.cpp.html
-title: verify/graph/topological_sort.is_dag.test.cpp
+- /verify/test/graph/topological_sort.is_dag.test.cpp
+- /verify/test/graph/topological_sort.is_dag.test.cpp.html
+title: test/graph/topological_sort.is_dag.test.cpp
 ---

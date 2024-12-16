@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/math/extended_gcd.test.cpp
-    title: verify/math/extended_gcd.test.cpp
+    path: test/math/extended_gcd.test.cpp
+    title: test/math/extended_gcd.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -35,7 +35,7 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/math/extended_gcd.test.cpp
+  - test/math/extended_gcd.test.cpp
 documentation_of: math/extended_gcd.hpp
 layout: document
 redirect_from:

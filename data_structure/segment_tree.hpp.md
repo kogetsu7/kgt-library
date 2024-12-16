@@ -4,17 +4,17 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/yosupo/static_range_min.test.cpp
-    title: verify/yosupo/static_range_min.test.cpp
+    path: test/yosupo/static_range_min.test.cpp
+    title: test/yosupo/static_range_min.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/yosupo/static_range_sum.test.cpp
-    title: verify/yosupo/static_range_sum.test.cpp
+    path: test/yosupo/static_range_sum.test.cpp
+    title: test/yosupo/static_range_sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/yosupo/vertex_add_path_sum.test.cpp
-    title: verify/yosupo/vertex_add_path_sum.test.cpp
+    path: test/yosupo/vertex_add_path_sum.test.cpp
+    title: test/yosupo/vertex_add_path_sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: verify/yosupo/vertex_add_subtree_sum.test.cpp
-    title: verify/yosupo/vertex_add_subtree_sum.test.cpp
+    path: test/yosupo/vertex_add_subtree_sum.test.cpp
+    title: test/yosupo/vertex_add_subtree_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -58,10 +58,10 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/yosupo/static_range_min.test.cpp
-  - verify/yosupo/vertex_add_path_sum.test.cpp
-  - verify/yosupo/static_range_sum.test.cpp
-  - verify/yosupo/vertex_add_subtree_sum.test.cpp
+  - test/yosupo/static_range_min.test.cpp
+  - test/yosupo/vertex_add_path_sum.test.cpp
+  - test/yosupo/static_range_sum.test.cpp
+  - test/yosupo/vertex_add_subtree_sum.test.cpp
 documentation_of: data_structure/segment_tree.hpp
 layout: document
 redirect_from:

@@ -11,11 +11,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_A
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_A
-  bundledCode: "#line 1 \"verify/aoj/GRL_3_A.test.cpp\"\n#define PROBLEM \\\n    \"\
-    https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_A\"\n\n#include\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B
+  bundledCode: "#line 1 \"test/aoj/GRL_3_B.test.cpp\"\n#define PROBLEM \\\n    \"\
+    https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B\"\n\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n\n#line 2 \"graph/low_link.hpp\"\n\n\
     /**\n * @brief Low Link\n */\nclass LowLink {\n  private:\n    bool init;\n  \
     \  int n, comp;\n    vector<vector<int>> g;\n    vector<bool> seen;\n    vector<int>\
@@ -39,30 +39,36 @@ data:
     \n        return art[v];\n    }\n\n    bool is_art(int v) const {\n        assert(init);\n\
     \n        return 0 < get_art(v);\n    }\n\n    bool is_bridge(int u, int v) const\
     \ {\n        assert(init);\n\n        return bri.count(make_pair(min(u, v), max(u,\
-    \ v)));\n    }\n};\n#line 8 \"verify/aoj/GRL_3_A.test.cpp\"\n\nint main() {\n\
-    \    int N, M;\n    cin >> N >> M;\n    LowLink lo(N);\n    for (int i = 0; i\
-    \ < M; i++) {\n        int u, v;\n        cin >> u >> v;\n        lo.add_edge(u,\
-    \ v);\n    }\n\n    lo.build();\n\n    for (int i = 0; i < N; i++) {\n       \
-    \ if (lo.is_art(i)) {\n            cout << i << endl;\n        }\n    }\n}\n"
-  code: "#define PROBLEM \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_A\"\
+    \ v)));\n    }\n};\n#line 8 \"test/aoj/GRL_3_B.test.cpp\"\n\nint main() {\n  \
+    \  int N, M;\n    cin >> N >> M;\n    LowLink lo(N);\n    vector<pair<int, int>>\
+    \ edge(M);\n    for (int i = 0; i < M; i++) {\n        int u, v;\n        cin\
+    \ >> u >> v;\n        edge[i] = make_pair(min(u, v), max(u, v));\n        lo.add_edge(u,\
+    \ v);\n    }\n\n    lo.build();\n\n    vector<pair<int, int>> ans;\n    for (auto\
+    \ [u, v] : edge) {\n        if (lo.is_bridge(u, v)) {\n            ans.push_back(make_pair(u,\
+    \ v));\n        }\n    }\n\n    sort(ans.begin(), ans.end());\n\n    for (auto\
+    \ [u, v] : ans) {\n        cout << u << ' ' << v << endl;\n    }\n}\n"
+  code: "#define PROBLEM \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B\"\
     \n\n#include <bits/stdc++.h>\nusing namespace std;\n\n#include \"../../graph/low_link.hpp\"\
-    \n\nint main() {\n    int N, M;\n    cin >> N >> M;\n    LowLink lo(N);\n    for\
-    \ (int i = 0; i < M; i++) {\n        int u, v;\n        cin >> u >> v;\n     \
-    \   lo.add_edge(u, v);\n    }\n\n    lo.build();\n\n    for (int i = 0; i < N;\
-    \ i++) {\n        if (lo.is_art(i)) {\n            cout << i << endl;\n      \
-    \  }\n    }\n}\n"
+    \n\nint main() {\n    int N, M;\n    cin >> N >> M;\n    LowLink lo(N);\n    vector<pair<int,\
+    \ int>> edge(M);\n    for (int i = 0; i < M; i++) {\n        int u, v;\n     \
+    \   cin >> u >> v;\n        edge[i] = make_pair(min(u, v), max(u, v));\n     \
+    \   lo.add_edge(u, v);\n    }\n\n    lo.build();\n\n    vector<pair<int, int>>\
+    \ ans;\n    for (auto [u, v] : edge) {\n        if (lo.is_bridge(u, v)) {\n  \
+    \          ans.push_back(make_pair(u, v));\n        }\n    }\n\n    sort(ans.begin(),\
+    \ ans.end());\n\n    for (auto [u, v] : ans) {\n        cout << u << ' ' << v\
+    \ << endl;\n    }\n}\n"
   dependsOn:
   - graph/low_link.hpp
   isVerificationFile: true
-  path: verify/aoj/GRL_3_A.test.cpp
+  path: test/aoj/GRL_3_B.test.cpp
   requiredBy: []
-  timestamp: '2024-12-15 15:13:21+09:00'
+  timestamp: '2024-12-16 15:18:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/aoj/GRL_3_A.test.cpp
+documentation_of: test/aoj/GRL_3_B.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/aoj/GRL_3_A.test.cpp
-- /verify/verify/aoj/GRL_3_A.test.cpp.html
-title: verify/aoj/GRL_3_A.test.cpp
+- /verify/test/aoj/GRL_3_B.test.cpp
+- /verify/test/aoj/GRL_3_B.test.cpp.html
+title: test/aoj/GRL_3_B.test.cpp
 ---

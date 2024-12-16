@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/aoj/2426.test.cpp
-    title: verify/aoj/2426.test.cpp
+    path: test/aoj/2426.test.cpp
+    title: test/aoj/2426.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -85,7 +85,7 @@ data:
   timestamp: '2024-12-15 14:14:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/aoj/2426.test.cpp
+  - test/aoj/2426.test.cpp
 documentation_of: data_structure/merge_sort_tree.hpp
 layout: document
 redirect_from:
