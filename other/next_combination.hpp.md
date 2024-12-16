@@ -13,7 +13,7 @@ data:
     document_title: Next Combination
     links: []
   bundledCode: "#line 2 \"other/next_combination.hpp\"\n\n#include <algorithm>\n#include\
-    \ <iterator>\n\nnamespace ku {\n/**\n * @brief Next Combination\n */\ntemplate\
+    \ <iterator>\n\nnamespace kgt {\n/**\n * @brief Next Combination\n */\ntemplate\
     \ <class I>\nbool NextCombination(const I& begin, const I& end, const size_t k)\
     \ {\n    const I sub = std::next(begin, k);\n\n    if (begin == end || begin ==\
     \ sub || end == sub) {\n        return false;\n    }\n\n    I src = sub;\n   \
@@ -23,8 +23,8 @@ data:
     \  std::iter_swap(src, dst);\n            std::rotate(std::next(src, 1), std::next(dst,\
     \ 1), end);\n            std::rotate(sub, std::next(sub, std::distance(dst, end)\
     \ - 1), end);\n\n            return true;\n        }\n    }\n\n    std::rotate(begin,\
-    \ sub, end);\n\n    return false;\n}\n};  // namespace ku\n"
-  code: "#pragma once\n\n#include <algorithm>\n#include <iterator>\n\nnamespace ku\
+    \ sub, end);\n\n    return false;\n}\n};  // namespace kgt\n"
+  code: "#pragma once\n\n#include <algorithm>\n#include <iterator>\n\nnamespace kgt\
     \ {\n/**\n * @brief Next Combination\n */\ntemplate <class I>\nbool NextCombination(const\
     \ I& begin, const I& end, const size_t k) {\n    const I sub = std::next(begin,\
     \ k);\n\n    if (begin == end || begin == sub || end == sub) {\n        return\
@@ -34,12 +34,12 @@ data:
     \           }\n\n            std::iter_swap(src, dst);\n            std::rotate(std::next(src,\
     \ 1), std::next(dst, 1), end);\n            std::rotate(sub, std::next(sub, std::distance(dst,\
     \ end) - 1), end);\n\n            return true;\n        }\n    }\n\n    std::rotate(begin,\
-    \ sub, end);\n\n    return false;\n}\n};  // namespace ku\n"
+    \ sub, end);\n\n    return false;\n}\n};  // namespace kgt\n"
   dependsOn: []
   isVerificationFile: false
   path: other/next_combination.hpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
+  timestamp: '2024-12-16 16:07:21+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/other/next_combination.test.cpp

@@ -17,7 +17,7 @@ data:
     - https://yukicoder.me/problems/no/468
   bundledCode: "#line 1 \"test/graph/topological_sort.get.test.cpp\"\n#define PROBLEM\
     \ \"https://yukicoder.me/problems/no/468\"\n\n#line 2 \"graph/topological_sort.hpp\"\
-    \n\n#include <cassert>\n#include <queue>\n#include <vector>\n\nnamespace ku {\n\
+    \n\n#include <cassert>\n#include <queue>\n#include <vector>\n\nnamespace kgt {\n\
     /**\n * @brief Topological Sort (\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\
     \u30C8)\n */\nclass TopologicalSort {\n  private:\n    bool init;\n    bool dag;\n\
     \    size_t n;\n    std::vector<std::vector<int>> g;\n    std::vector<int> p;\n\
@@ -42,14 +42,15 @@ data:
     \n    bool is_dag() const noexcept {\n        assert(init);\n\n        return\
     \ dag;\n    }\n\n    int get(const size_t i) const noexcept {\n        assert(init);\n\
     \        assert(dag);\n        assert(i < n);\n\n        return p[i];\n    }\n\
-    };\n};  // namespace ku\n#line 4 \"test/graph/topological_sort.get.test.cpp\"\n\
-    \n#include <algorithm>\n#include <iostream>\n#include <utility>\n#line 9 \"test/graph/topological_sort.get.test.cpp\"\
-    \n\nint main() {\n    int N, M;\n    std::cin >> N >> M;\n\n    std::vector<std::vector<std::pair<int,\
-    \ int>>> g(N);\n    ku::TopologicalSort ts(N);\n    ku::TopologicalSort ts_inv(N);\n\
-    \n    for (int i = 0; i < M; i++) {\n        int u, v, w;\n        std::cin >>\
-    \ u >> v >> w;\n\n        g[u].emplace_back(v, w);\n        ts.add_edge(u, v);\n\
-    \        ts_inv.add_edge(v, u);\n    }\n\n    ts.build();\n    ts_inv.build();\n\
-    \n    assert(ts.is_dag());\n    assert(ts_inv.is_dag());\n\n    std::vector<int>\
+    };\n};  // namespace kgt\n#line 4 \"test/graph/topological_sort.get.test.cpp\"\
+    \n\n#include <algorithm>\n#include <iostream>\n#include <utility>\n#line 9 \"\
+    test/graph/topological_sort.get.test.cpp\"\n\nint main() {\n    int N, M;\n  \
+    \  std::cin >> N >> M;\n\n    std::vector<std::vector<std::pair<int, int>>> g(N);\n\
+    \    kgt::TopologicalSort ts(N);\n    kgt::TopologicalSort ts_inv(N);\n\n    for\
+    \ (int i = 0; i < M; i++) {\n        int u, v, w;\n        std::cin >> u >> v\
+    \ >> w;\n\n        g[u].emplace_back(v, w);\n        ts.add_edge(u, v);\n    \
+    \    ts_inv.add_edge(v, u);\n    }\n\n    ts.build();\n    ts_inv.build();\n\n\
+    \    assert(ts.is_dag());\n    assert(ts_inv.is_dag());\n\n    std::vector<int>\
     \ dp(N, 0);\n    std::vector<int> ep(N, 1 << 30);\n    ep[0] = 0;\n\n    for (int\
     \ i = 0; i < N; i++) {\n        int v = ts.get(i);\n        for (auto [nv, co]\
     \ : g[v]) {\n            dp[nv] = std::max(dp[nv], dp[v] + co);\n        }\n \
@@ -62,7 +63,7 @@ data:
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/468\"\n\n#include \"../../graph/topological_sort.hpp\"\
     \n\n#include <algorithm>\n#include <iostream>\n#include <utility>\n#include <vector>\n\
     \nint main() {\n    int N, M;\n    std::cin >> N >> M;\n\n    std::vector<std::vector<std::pair<int,\
-    \ int>>> g(N);\n    ku::TopologicalSort ts(N);\n    ku::TopologicalSort ts_inv(N);\n\
+    \ int>>> g(N);\n    kgt::TopologicalSort ts(N);\n    kgt::TopologicalSort ts_inv(N);\n\
     \n    for (int i = 0; i < M; i++) {\n        int u, v, w;\n        std::cin >>\
     \ u >> v >> w;\n\n        g[u].emplace_back(v, w);\n        ts.add_edge(u, v);\n\
     \        ts_inv.add_edge(v, u);\n    }\n\n    ts.build();\n    ts_inv.build();\n\
@@ -81,7 +82,7 @@ data:
   isVerificationFile: true
   path: test/graph/topological_sort.get.test.cpp
   requiredBy: []
-  timestamp: '2024-12-16 15:18:39+09:00'
+  timestamp: '2024-12-16 16:07:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/graph/topological_sort.get.test.cpp

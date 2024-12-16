@@ -17,7 +17,7 @@ data:
       \u30C8)"
     links: []
   bundledCode: "#line 2 \"graph/topological_sort.hpp\"\n\n#include <cassert>\n#include\
-    \ <queue>\n#include <vector>\n\nnamespace ku {\n/**\n * @brief Topological Sort\
+    \ <queue>\n#include <vector>\n\nnamespace kgt {\n/**\n * @brief Topological Sort\
     \ (\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8)\n */\nclass TopologicalSort\
     \ {\n  private:\n    bool init;\n    bool dag;\n    size_t n;\n    std::vector<std::vector<int>>\
     \ g;\n    std::vector<int> p;\n\n  public:\n    TopologicalSort() noexcept : TopologicalSort(0)\
@@ -41,9 +41,9 @@ data:
     \n    bool is_dag() const noexcept {\n        assert(init);\n\n        return\
     \ dag;\n    }\n\n    int get(const size_t i) const noexcept {\n        assert(init);\n\
     \        assert(dag);\n        assert(i < n);\n\n        return p[i];\n    }\n\
-    };\n};  // namespace ku\n"
+    };\n};  // namespace kgt\n"
   code: "#pragma once\n\n#include <cassert>\n#include <queue>\n#include <vector>\n\
-    \nnamespace ku {\n/**\n * @brief Topological Sort (\u30C8\u30DD\u30ED\u30B8\u30AB\
+    \nnamespace kgt {\n/**\n * @brief Topological Sort (\u30C8\u30DD\u30ED\u30B8\u30AB\
     \u30EB\u30BD\u30FC\u30C8)\n */\nclass TopologicalSort {\n  private:\n    bool\
     \ init;\n    bool dag;\n    size_t n;\n    std::vector<std::vector<int>> g;\n\
     \    std::vector<int> p;\n\n  public:\n    TopologicalSort() noexcept : TopologicalSort(0)\
@@ -67,12 +67,12 @@ data:
     \n    bool is_dag() const noexcept {\n        assert(init);\n\n        return\
     \ dag;\n    }\n\n    int get(const size_t i) const noexcept {\n        assert(init);\n\
     \        assert(dag);\n        assert(i < n);\n\n        return p[i];\n    }\n\
-    };\n};  // namespace ku\n"
+    };\n};  // namespace kgt\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/topological_sort.hpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
+  timestamp: '2024-12-16 16:07:21+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/graph/topological_sort.get.test.cpp

@@ -24,7 +24,7 @@ data:
     using i16_t = std::int_least16_t;\nusing i32_t = std::int_least32_t;\nusing i64_t\
     \ = std::int_least64_t;\nusing i128_t = __int128_t;\n\nusing u8_t = std::uint_least8_t;\n\
     using u16_t = std::uint_least16_t;\nusing u32_t = std::uint_least32_t;\nusing\
-    \ u64_t = std::uint_least64_t;\n  using u128_t = __uint128_t;\n};  // namespace\
+    \ u64_t = std::uint_least64_t;\nusing u128_t = __uint128_t;\n};  // namespace\
     \ kgt\n#line 4 \"template/macros.hpp\"\n\n#include <iterator>\n\n#if defined(DEBUG)\
     \ && __has_include(<cpp-dump/cpp-dump.hpp>)\n#include <cpp-dump/cpp-dump.hpp>\n\
     #define dump(...) cpp_dump(__VA_ARGS__)\n#else\n#define dump(...) ((void)0)\n\
@@ -65,7 +65,7 @@ data:
   path: template/macros.hpp
   requiredBy:
   - template/template.hpp
-  timestamp: '2024-12-16 15:57:44+09:00'
+  timestamp: '2024-12-16 16:05:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/template/template.test.cpp
