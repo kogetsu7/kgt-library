@@ -30,8 +30,9 @@ int main() {
     rrep(i, 9, 0, 1) { s += i; }
     assert(s == 45);
 
-    cout << "Hello World"
-         << "\n";
+    str_t ans = "Hello World";
+
+    cout << ans << "\n";
 
     return 0;
 }

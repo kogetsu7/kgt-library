@@ -31,6 +31,8 @@ using size_t = std::size_t;
 using real_t = long double;
 using complex_t = std::complex<real_t>;
 
+using str_t = std::string;
+
 template <class T>
 using is_signed_int = std::bool_constant<(std::is_integral<T>::value &&
                                           std::is_signed<T>::value) ||
