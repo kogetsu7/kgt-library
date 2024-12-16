@@ -28,4 +28,4 @@ jobs:
         sudo apt-get install clang-format
 
     - name: Apply formatter
-      run: clang-format --dry-run --Werror `find . -name "*.cpp" -or -name "*.hpp"`
+      run: clang-format --dry-run --Werror $(find . -name "*.cpp" -or -name "*.hpp")
