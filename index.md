@@ -62,9 +62,6 @@ data:
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
-      path: template/includes.hpp
-      title: template/includes.hpp
-    - icon: ':heavy_check_mark:'
       path: template/macros.hpp
       title: template/macros.hpp
     - icon: ':heavy_check_mark:'
