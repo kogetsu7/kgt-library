@@ -1,12 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: template/macros.hpp
-    title: template/macros.hpp
-  - icon: ':heavy_check_mark:'
-    path: template/types.hpp
-    title: template/types.hpp
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -20,63 +14,74 @@ data:
   bundledCode: "#line 2 \"template/template.hpp\"\n/**\n * @author ku_senjan\n */\n\
     \n#if defined(DEBUG)\n#define _GLIBCXX_DEBUG\n#endif\n\n#include <bits/stdc++.h>\n\
     using namespace std;\n\n#if __has_include(<atcoder/all>)\n#include <atcoder/all>\n\
-    using namespace atcoder;\n#endif\n\n#line 2 \"template/macros.hpp\"\n\n#line 2\
-    \ \"template/types.hpp\"\n\n#line 7 \"template/types.hpp\"\n#include <type_traits>\n\
-    \n#if __has_include(<boost/multiprecision/cpp_int.hpp>)\n#include <boost/multiprecision/cpp_int.hpp>\n\
-    namespace kgt {\nusing iinf_t = boost::multiprecision::cpp_int;\n};  // namespace\
-    \ kgt\n#endif\n\nnamespace kgt {\nusing i8_t = std::int_least8_t;\nusing i16_t\
-    \ = std::int_least16_t;\nusing i32_t = std::int_least32_t;\nusing i64_t = std::int_least64_t;\n\
-    using i128_t = __int128_t;\n\nusing u8_t = std::uint_least8_t;\nusing u16_t =\
-    \ std::uint_least16_t;\nusing u32_t = std::uint_least32_t;\nusing u64_t = std::uint_least64_t;\n\
-    using u128_t = __uint128_t;\n\nusing size_t = std::size_t;\n\nusing real_t = long\
-    \ double;\nusing complex_t = std::complex<real_t>;\n\nusing str_t = std::string;\n\
-    \ntemplate <class T>\nusing is_signed_int = std::bool_constant<(std::is_integral<T>::value\
-    \ &&\n                                          std::is_signed<T>::value) ||\n\
-    \                                         std::is_same<T, i128_t>::value>;\n\n\
-    template <class T>\nusing is_unsigned_int = std::bool_constant<(std::is_integral<T>::value\
-    \ &&\n                                            std::is_unsigned<T>::value)\
-    \ ||\n                                           std::is_same<T, u128_t>::value>;\n\
-    \ntemplate <class T>\nusing is_int =\n    std::bool_constant<is_signed_int<T>::value\
-    \ || is_unsigned_int<T>::value>;\n\ntemplate <size_t D>\nusing signed_int_least\
-    \ = std::enable_if<\n    D <= 128,\n    typename std::conditional<\n        D\
-    \ <= 8,\n        i8_t,\n        typename std::conditional<\n            D <= 16,\n\
-    \            i16_t,\n            typename std::conditional<\n                D\
-    \ <= 32,\n                i32_t,\n                typename std::conditional<D\
-    \ <= 64, i64_t, i128_t>::type>::\n                type>::type>::type>;\n\ntemplate\
-    \ <size_t D>\nusing unsigned_int_least = std::enable_if<\n    D <= 128,\n    typename\
-    \ std::conditional<\n        D <= 8,\n        u8_t,\n        typename std::conditional<\n\
-    \            D <= 16,\n            u16_t,\n            typename std::conditional<\n\
-    \                D <= 32,\n                u32_t,\n                typename std::conditional<D\
-    \ <= 64, u64_t, u128_t>::type>::\n                type>::type>::type>;\n};  //\
-    \ namespace kgt\n#line 4 \"template/macros.hpp\"\n\n#line 6 \"template/macros.hpp\"\
-    \n\n#if defined(DEBUG) && __has_include(<cpp-dump.hpp>)\n#include <cpp-dump.hpp>\n\
-    #define dump(...) cpp_dump(__VA_ARGS__)\n#else\n#define dump(...) ((void)0)\n\
-    #endif\n\n#define overload4(a, b, c, d, e, ...) e\n\n#define rep1(i, a) for (kgt::i64_t\
-    \ i = 0; i < static_cast<kgt::i64_t>(a); ++i)\n#define rep2(i, a, b)         \
-    \                      \\\n    for (kgt::i64_t i = static_cast<kgt::i64_t>(a);\
-    \ \\\n         i < static_cast<kgt::i64_t>(b); ++i)\n#define rep3(i, a, b, c)\
-    \                            \\\n    for (kgt::i64_t i = static_cast<kgt::i64_t>(a);\
-    \ \\\n         i < static_cast<kgt::i64_t>(b); i += static_cast<kgt::i64_t>(c))\n\
-    #define rep(...) overload4(__VA_ARGS__, rep3, rep2, rep1)(__VA_ARGS__)\n\n#define\
-    \ rrep1(i, a) for (kgt::i64_t i = static_cast<kgt::i64_t>(a); i >= 0; --i)\n#define\
-    \ rrep2(i, a, b)                              \\\n    for (kgt::i64_t i = static_cast<kgt::i64_t>(a);\
-    \ \\\n         i >= static_cast<kgt::i64_t>(b); --i)\n#define rrep3(i, a, b, c)\
-    \                           \\\n    for (kgt::i64_t i = static_cast<kgt::i64_t>(a);\
-    \ \\\n         i >= static_cast<kgt::i64_t>(b); i -= static_cast<kgt::i64_t>(c))\n\
-    #define rrep(...) overload4(__VA_ARGS__, rrep3, rrep2, rrep1)(__VA_ARGS__)\n\n\
-    #define all(a) std::begin(a), std::end(a)\n#define rall(a) std::rbegin(a), std::rend(a)\n\
-    #line 20 \"template/template.hpp\"\n\nusing namespace kgt;\n"
+    using namespace atcoder;\n#endif\n\n#if defined(DEBUG) && __has_include(<cpp-dump.hpp>)\n\
+    #include <cpp-dump.hpp>\n#define dump(...) cpp_dump(__VA_ARGS__)\n#else\n#define\
+    \ dump(...) ((void)0)\n#endif\n\n#if __has_include(<boost/multiprecision/cpp_int.hpp>)\n\
+    #include <boost/multiprecision/cpp_int.hpp>\nusing boost::multiprecision::cpp_int;\n\
+    #endif\n\nusing uint = unsigned;\nusing ll = long long;\nusing ull = unsigned\
+    \ long long;\nusing i128 = __int128_t;\nusing u128 = __uint128_t;\nusing ld =\
+    \ long double;\ntemplate <class T>\nusing min_priority_queue = priority_queue<T,\
+    \ vector<T>, greater<T>>;\n\nconst ld PI = acos(-1);\nconstexpr int INF32 = INT_MAX\
+    \ / 2;\nconstexpr ll INF64 = 1LL << 60;\nconstexpr array<int, 4> DX4 = {0, 1,\
+    \ 0, -1};\nconstexpr array<int, 4> DY4 = {-1, 0, 1, 0};\nconstexpr array<int,\
+    \ 8> DX8 = {0, 1, 1, 1, 0, -1, -1, -1};\nconstexpr array<int, 8> DY8 = {-1, -1,\
+    \ 0, 1, 1, 1, 0, -1};\nconstexpr char LF = '\\n';\n\n#define overload4(a, b, c,\
+    \ d, e, ...) e\n#define overload6(a, b, c, d, e, f, g, ...) g\n\n#define rep1(i,\
+    \ a) for (ll i = 0; (i) < (ll)(a); ++(i))\n#define rep2(i, a, b) for (ll i = (ll)(a);\
+    \ (i) < (ll)(b); ++(i))\n#define rep3(i, a, b, c) for (ll i = (ll)(a); (i) < (ll)(b);\
+    \ (i) += (ll)(c))\n#define rep(...) overload4(__VA_ARGS__, rep3, rep2, rep1)(__VA_ARGS__)\n\
+    \n#define rrep1(i, a) for (ll i = (ll)(a); (i) >= 0; --(i))\n#define rrep2(i,\
+    \ a, b) for (ll i = (ll)(a); (i) >= (ll)(b); --(i))\n#define rrep3(i, a, b, c)\
+    \ for (ll i = (ll)(a); (i) >= (ll)(b); (i) -= (ll)(c))\n#define rrep(...) overload4(__VA_ARGS__,\
+    \ rrep3, rrep2, rrep1)(__VA_ARGS__)\n\n#define fore1(i, a) for (auto& i : (a))\n\
+    #define fore2(i, j, a) for (auto& [i, j] : (a))\n#define fore3(i, j, k, a) for\
+    \ (auto& [i, j, k] : (a))\n#define fore4(i, j, k, l, a) for (auto& [i, j, k, l]\
+    \ : (a))\n#define fore5(i, j, k, l, m, a) for (auto& [i, j, k, l, m] : (a))\n\
+    #define fore(...) \\\n    overload6(__VA_ARGS__, fore5, fore4, fore3, fore2, fore1)(__VA_ARGS__)\n\
+    \n#define all(a) (a).begin(), (a).end()\n#define rall(a) (a).rbegin(), (a).rend()\n\
+    \ntemplate <class T> bool chmin(T& a, const T& b) {\n    return (a > b) ? (a =\
+    \ b, true) : false;\n}\ntemplate <class T> bool chmax(T& a, const T& b) {\n  \
+    \  return (a < b) ? (a = b, true) : false;\n}\n\nstring yes(const bool a) { return\
+    \ a ? \"yes\" : \"no\"; }\nstring Yes(const bool a) { return a ? \"Yes\" : \"\
+    No\"; }\nstring YES(const bool a) { return a ? \"YES\" : \"NO\"; }\n"
   code: "#pragma once\n/**\n * @author ku_senjan\n */\n\n#if defined(DEBUG)\n#define\
     \ _GLIBCXX_DEBUG\n#endif\n\n#include <bits/stdc++.h>\nusing namespace std;\n\n\
     #if __has_include(<atcoder/all>)\n#include <atcoder/all>\nusing namespace atcoder;\n\
-    #endif\n\n#include \"macros.hpp\"\n#include \"types.hpp\"\n\nusing namespace kgt;\n"
-  dependsOn:
-  - template/macros.hpp
-  - template/types.hpp
+    #endif\n\n#if defined(DEBUG) && __has_include(<cpp-dump.hpp>)\n#include <cpp-dump.hpp>\n\
+    #define dump(...) cpp_dump(__VA_ARGS__)\n#else\n#define dump(...) ((void)0)\n\
+    #endif\n\n#if __has_include(<boost/multiprecision/cpp_int.hpp>)\n#include <boost/multiprecision/cpp_int.hpp>\n\
+    using boost::multiprecision::cpp_int;\n#endif\n\nusing uint = unsigned;\nusing\
+    \ ll = long long;\nusing ull = unsigned long long;\nusing i128 = __int128_t;\n\
+    using u128 = __uint128_t;\nusing ld = long double;\ntemplate <class T>\nusing\
+    \ min_priority_queue = priority_queue<T, vector<T>, greater<T>>;\n\nconst ld PI\
+    \ = acos(-1);\nconstexpr int INF32 = INT_MAX / 2;\nconstexpr ll INF64 = 1LL <<\
+    \ 60;\nconstexpr array<int, 4> DX4 = {0, 1, 0, -1};\nconstexpr array<int, 4> DY4\
+    \ = {-1, 0, 1, 0};\nconstexpr array<int, 8> DX8 = {0, 1, 1, 1, 0, -1, -1, -1};\n\
+    constexpr array<int, 8> DY8 = {-1, -1, 0, 1, 1, 1, 0, -1};\nconstexpr char LF\
+    \ = '\\n';\n\n#define overload4(a, b, c, d, e, ...) e\n#define overload6(a, b,\
+    \ c, d, e, f, g, ...) g\n\n#define rep1(i, a) for (ll i = 0; (i) < (ll)(a); ++(i))\n\
+    #define rep2(i, a, b) for (ll i = (ll)(a); (i) < (ll)(b); ++(i))\n#define rep3(i,\
+    \ a, b, c) for (ll i = (ll)(a); (i) < (ll)(b); (i) += (ll)(c))\n#define rep(...)\
+    \ overload4(__VA_ARGS__, rep3, rep2, rep1)(__VA_ARGS__)\n\n#define rrep1(i, a)\
+    \ for (ll i = (ll)(a); (i) >= 0; --(i))\n#define rrep2(i, a, b) for (ll i = (ll)(a);\
+    \ (i) >= (ll)(b); --(i))\n#define rrep3(i, a, b, c) for (ll i = (ll)(a); (i) >=\
+    \ (ll)(b); (i) -= (ll)(c))\n#define rrep(...) overload4(__VA_ARGS__, rrep3, rrep2,\
+    \ rrep1)(__VA_ARGS__)\n\n#define fore1(i, a) for (auto& i : (a))\n#define fore2(i,\
+    \ j, a) for (auto& [i, j] : (a))\n#define fore3(i, j, k, a) for (auto& [i, j,\
+    \ k] : (a))\n#define fore4(i, j, k, l, a) for (auto& [i, j, k, l] : (a))\n#define\
+    \ fore5(i, j, k, l, m, a) for (auto& [i, j, k, l, m] : (a))\n#define fore(...)\
+    \ \\\n    overload6(__VA_ARGS__, fore5, fore4, fore3, fore2, fore1)(__VA_ARGS__)\n\
+    \n#define all(a) (a).begin(), (a).end()\n#define rall(a) (a).rbegin(), (a).rend()\n\
+    \ntemplate <class T> bool chmin(T& a, const T& b) {\n    return (a > b) ? (a =\
+    \ b, true) : false;\n}\ntemplate <class T> bool chmax(T& a, const T& b) {\n  \
+    \  return (a < b) ? (a = b, true) : false;\n}\n\nstring yes(const bool a) { return\
+    \ a ? \"yes\" : \"no\"; }\nstring Yes(const bool a) { return a ? \"Yes\" : \"\
+    No\"; }\nstring YES(const bool a) { return a ? \"YES\" : \"NO\"; }\n"
+  dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2024-12-16 17:45:11+09:00'
+  timestamp: '2024-12-16 19:18:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/template/template.test.cpp
