@@ -24,15 +24,37 @@ data:
     \n\n#if defined(DEBUG)\n#define _GLIBCXX_DEBUG\n#endif\n\n#include <bits/stdc++.h>\n\
     using namespace std;\n\n#if __has_include(<atcoder/all>)\n#include <atcoder/all>\n\
     using namespace atcoder;\n#endif\n#line 2 \"template/macros.hpp\"\n\n#line 2 \"\
-    template/types.hpp\"\n\n#line 5 \"template/types.hpp\"\n\n#if __has_include(<boost/multiprecision/cpp_int.hpp>)\n\
-    #include <boost/multiprecision/cpp_int.hpp>\nnamespace kgt {\nusing iinf_t = boost::multiprecision::cpp_int;\n\
-    };  // namespace kgt\n#endif\n\nnamespace kgt {\nusing i8_t = std::int_least8_t;\n\
-    using i16_t = std::int_least16_t;\nusing i32_t = std::int_least32_t;\nusing i64_t\
-    \ = std::int_least64_t;\nusing i128_t = __int128_t;\n\nusing u8_t = std::uint_least8_t;\n\
-    using u16_t = std::uint_least16_t;\nusing u32_t = std::uint_least32_t;\nusing\
-    \ u64_t = std::uint_least64_t;\nusing u128_t = __uint128_t;\n};  // namespace\
-    \ kgt\n#line 4 \"template/macros.hpp\"\n\n#line 6 \"template/macros.hpp\"\n\n\
-    #if defined(DEBUG) && __has_include(<cpp-dump/cpp-dump.hpp>)\n#include <cpp-dump/cpp-dump.hpp>\n\
+    template/types.hpp\"\n\n#line 6 \"template/types.hpp\"\n#include <type_traits>\n\
+    \n#if __has_include(<boost/multiprecision/cpp_int.hpp>)\n#include <boost/multiprecision/cpp_int.hpp>\n\
+    namespace kgt {\nusing iinf_t = boost::multiprecision::cpp_int;\n};  // namespace\
+    \ kgt\n#endif\n\nnamespace kgt {\ntemplate <class T>\nusing is_signed_int = std::bool_constant<(std::is_integral<T>::value\
+    \ &&\n                                          std::is_signed<T>::value) ||\n\
+    \                                         std::is_same<T, __int128_t>::value>;\n\
+    \ntemplate <class T>\nusing is_unsigned_int = std::bool_constant<(std::is_integral<T>::value\
+    \ &&\n                                            std::is_unsigned<T>::value)\
+    \ ||\n                                           std::is_same<T, __uint128_t>::value>;\n\
+    \ntemplate <class T>\nusing is_int =\n    std::bool_constant<is_signed_int<T>::value\
+    \ || is_unsigned_int<T>::value>;\n\nusing size_t = std::size_t;\n\ntemplate <size_t\
+    \ D>\nusing signed_int_least = std::enable_if<\n    D <= 128,\n    typename std::conditional<\n\
+    \        D <= 8,\n        std::int_least8_t,\n        typename std::conditional<\n\
+    \            D <= 16,\n            std::int_least16_t,\n            typename std::conditional<\n\
+    \                D <= 32,\n                std::int_least32_t,\n             \
+    \   typename std::\n                    conditional<D <= 64, std::int_least64_t,\
+    \ __int128_t>::\n                        type>::type>::type>::type>;\n\ntemplate\
+    \ <size_t D>\nusing unsigned_int_least = std::enable_if<\n    D <= 128,\n    typename\
+    \ std::conditional<\n        D <= 8,\n        std::uint_least8_t,\n        typename\
+    \ std::conditional<\n            D <= 16,\n            std::uint_least16_t,\n\
+    \            typename std::conditional<\n                D <= 32,\n          \
+    \      std::uint_least32_t,\n                typename std::\n                \
+    \    conditional<D <= 64, std::uint_least64_t, __uint128_t>::\n              \
+    \          type>::type>::type>::type>;\n\nusing i8_t = typename signed_int_least<8>::type;\n\
+    using i16_t = typename signed_int_least<16>::type;\nusing i32_t = typename signed_int_least<32>::type;\n\
+    using i64_t = typename signed_int_least<64>::type;\nusing i128_t = typename signed_int_least<128>::type;\n\
+    \nusing u8_t = typename unsigned_int_least<8>::type;\nusing u16_t = typename unsigned_int_least<16>::type;\n\
+    using u32_t = typename unsigned_int_least<32>::type;\nusing u64_t = typename unsigned_int_least<64>::type;\n\
+    using u128_t = typename unsigned_int_least<128>::type;\n};  // namespace kgt\n\
+    #line 4 \"template/macros.hpp\"\n\n#line 6 \"template/macros.hpp\"\n\n#if defined(DEBUG)\
+    \ && __has_include(<cpp-dump/cpp-dump.hpp>)\n#include <cpp-dump/cpp-dump.hpp>\n\
     #define dump(...) cpp_dump(__VA_ARGS__)\n#else\n#define dump(...) ((void)0)\n\
     #endif\n\n#define overload4(a, b, c, d, e, ...) e\n\n#define rep1(i, a) for (kgt::i64_t\
     \ i = 0; i < static_cast<kgt::i64_t>(a); ++i)\n#define rep2(i, a, b)         \
@@ -69,7 +91,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2024-12-16 16:05:04+09:00'
+  timestamp: '2024-12-16 16:30:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/template/template.test.cpp
