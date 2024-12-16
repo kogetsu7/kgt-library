@@ -4,11 +4,14 @@
 #include "../../template/template.hpp"
 
 int main() {
-    i64_t s = 0;
+    ll s = 0;
 
     s = 0;
     rep(i, 10) { s += i; }
     assert(s == 45);
+    assert(chmin(s, 0LL));
+    assert(chmax(s, 100LL));
+    assert(Yes(chmin(s, 0LL)) == "Yes");
 
     s = 0;
     rep(i, 0, 10) { s += i; }
@@ -30,9 +33,9 @@ int main() {
     rrep(i, 9, 0, 1) { s += i; }
     assert(s == 45);
 
-    str_t ans = "Hello World";
+    string ans = "Hello World";
 
-    cout << ans << "\n";
+    cout << ans << LF;
 
     return 0;
 }
