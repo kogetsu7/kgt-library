@@ -19,7 +19,7 @@ data:
     - https://judge.yosupo.jp/problem/pow_of_matrix
   bundledCode: "#line 1 \"test/math/matrix.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/pow_of_matrix\"\
     \n\n#line 2 \"math/matrix.hpp\"\n\n#include <algorithm>\n#include <cassert>\n\
-    #include <vector>\n\nnamespace ku {\n/**\n * @brief Matrix (\u884C\u5217)\n */\n\
+    #include <vector>\n\nnamespace kgt {\n/**\n * @brief Matrix (\u884C\u5217)\n */\n\
     template <class T> class Matrix {\n  private:\n    size_t h;\n    size_t w;\n\
     \    std::vector<std::vector<T>> d;\n\n  public:\n    Matrix() noexcept : Matrix(0)\
     \ {}\n    explicit Matrix(const size_t _h) noexcept : Matrix(_h, _h) {}\n    explicit\
@@ -53,8 +53,8 @@ data:
     \        Matrix x = *this;\n\n        while (0 < y) {\n            if (y & 1U)\
     \ {\n                res *= x;\n            }\n\n            x *= x;\n       \
     \     y >>= 1U;\n        }\n\n        return res;\n    }\n};\n};  // namespace\
-    \ ku\n#line 2 \"math/static_mod_int.hpp\"\n\nnamespace ku {\n/**\n * @brief Static\
-    \ Mod Int\n */\ntemplate <unsigned M> class StaticModInt {\n    static_assert(0\
+    \ kgt\n#line 2 \"math/static_mod_int.hpp\"\n\nnamespace kgt {\n/**\n * @brief\
+    \ Static Mod Int\n */\ntemplate <unsigned M> class StaticModInt {\n    static_assert(0\
     \ < M, \"M must be positive.\");\n\n  private:\n    unsigned v;\n\n  public:\n\
     \    constexpr StaticModInt() noexcept : v(0) {}\n    explicit constexpr StaticModInt(const\
     \ unsigned long long _v) noexcept\n        : v(static_cast<unsigned>(_v % M))\
@@ -90,27 +90,27 @@ data:
     \   StaticModInt x = *this;\n\n        while (0 < y) {\n            if (y & 1U)\
     \ {\n                res *= x;\n            }\n\n            x *= x;\n       \
     \     y >>= 1U;\n        }\n\n        return res;\n    }\n\n    constexpr StaticModInt\
-    \ inv() const noexcept { return pow(M - 2); }\n};\n};  // namespace ku\n#line\
+    \ inv() const noexcept { return pow(M - 2); }\n};\n};  // namespace kgt\n#line\
     \ 5 \"test/math/matrix.test.cpp\"\n\n#include <iostream>\n#line 8 \"test/math/matrix.test.cpp\"\
     \n\nint main() {\n    int N;\n    long long K;\n    std::cin >> N >> K;\n    std::vector\
-    \ A(N, std::vector<ku::StaticModInt<998244353>>(N));\n    ku::Matrix<ku::StaticModInt<998244353>>\
+    \ A(N, std::vector<kgt::StaticModInt<998244353>>(N));\n    kgt::Matrix<kgt::StaticModInt<998244353>>\
     \ mat(N);\n    for (int i = 0; i < N; i++) {\n        for (int j = 0; j < N; j++)\
     \ {\n            unsigned a;\n            std::cin >> a;\n            A[i][j]\
-    \ = ku::StaticModInt<998244353>(a);\n            mat.set(i, j, A[i][j]);\n   \
-    \     }\n    }\n\n    ku::Matrix<ku::StaticModInt<998244353>> mat2(A);\n    assert(mat\
-    \ == mat2);\n    assert(!(mat != mat2));\n\n    mat = mat.pow(K);\n\n    for (int\
-    \ i = 0; i < N; i++) {\n        for (int j = 0; j < N; j++) {\n            if\
-    \ (0 < j) {\n                std::cout << \" \";\n            }\n\n          \
-    \  std::cout << mat.get(i, j).val();\n        }\n        std::cout << \"\\n\"\
-    ;\n    }\n\n    return 0;\n}\n"
+    \ = kgt::StaticModInt<998244353>(a);\n            mat.set(i, j, A[i][j]);\n  \
+    \      }\n    }\n\n    kgt::Matrix<kgt::StaticModInt<998244353>> mat2(A);\n  \
+    \  assert(mat == mat2);\n    assert(!(mat != mat2));\n\n    mat = mat.pow(K);\n\
+    \n    for (int i = 0; i < N; i++) {\n        for (int j = 0; j < N; j++) {\n \
+    \           if (0 < j) {\n                std::cout << \" \";\n            }\n\
+    \n            std::cout << mat.get(i, j).val();\n        }\n        std::cout\
+    \ << \"\\n\";\n    }\n\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/pow_of_matrix\"\n\n#include\
     \ \"../../math/matrix.hpp\"\n#include \"../../math/static_mod_int.hpp\"\n\n#include\
     \ <iostream>\n#include <vector>\n\nint main() {\n    int N;\n    long long K;\n\
-    \    std::cin >> N >> K;\n    std::vector A(N, std::vector<ku::StaticModInt<998244353>>(N));\n\
-    \    ku::Matrix<ku::StaticModInt<998244353>> mat(N);\n    for (int i = 0; i <\
-    \ N; i++) {\n        for (int j = 0; j < N; j++) {\n            unsigned a;\n\
-    \            std::cin >> a;\n            A[i][j] = ku::StaticModInt<998244353>(a);\n\
-    \            mat.set(i, j, A[i][j]);\n        }\n    }\n\n    ku::Matrix<ku::StaticModInt<998244353>>\
+    \    std::cin >> N >> K;\n    std::vector A(N, std::vector<kgt::StaticModInt<998244353>>(N));\n\
+    \    kgt::Matrix<kgt::StaticModInt<998244353>> mat(N);\n    for (int i = 0; i\
+    \ < N; i++) {\n        for (int j = 0; j < N; j++) {\n            unsigned a;\n\
+    \            std::cin >> a;\n            A[i][j] = kgt::StaticModInt<998244353>(a);\n\
+    \            mat.set(i, j, A[i][j]);\n        }\n    }\n\n    kgt::Matrix<kgt::StaticModInt<998244353>>\
     \ mat2(A);\n    assert(mat == mat2);\n    assert(!(mat != mat2));\n\n    mat =\
     \ mat.pow(K);\n\n    for (int i = 0; i < N; i++) {\n        for (int j = 0; j\
     \ < N; j++) {\n            if (0 < j) {\n                std::cout << \" \";\n\
@@ -122,7 +122,7 @@ data:
   isVerificationFile: true
   path: test/math/matrix.test.cpp
   requiredBy: []
-  timestamp: '2024-12-16 15:18:39+09:00'
+  timestamp: '2024-12-16 15:57:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/math/matrix.test.cpp

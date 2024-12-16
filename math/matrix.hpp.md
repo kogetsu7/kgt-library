@@ -13,7 +13,7 @@ data:
     document_title: "Matrix (\u884C\u5217)"
     links: []
   bundledCode: "#line 2 \"math/matrix.hpp\"\n\n#include <algorithm>\n#include <cassert>\n\
-    #include <vector>\n\nnamespace ku {\n/**\n * @brief Matrix (\u884C\u5217)\n */\n\
+    #include <vector>\n\nnamespace kgt {\n/**\n * @brief Matrix (\u884C\u5217)\n */\n\
     template <class T> class Matrix {\n  private:\n    size_t h;\n    size_t w;\n\
     \    std::vector<std::vector<T>> d;\n\n  public:\n    Matrix() noexcept : Matrix(0)\
     \ {}\n    explicit Matrix(const size_t _h) noexcept : Matrix(_h, _h) {}\n    explicit\
@@ -47,10 +47,10 @@ data:
     \        Matrix x = *this;\n\n        while (0 < y) {\n            if (y & 1U)\
     \ {\n                res *= x;\n            }\n\n            x *= x;\n       \
     \     y >>= 1U;\n        }\n\n        return res;\n    }\n};\n};  // namespace\
-    \ ku\n"
+    \ kgt\n"
   code: "#pragma once\n\n#include <algorithm>\n#include <cassert>\n#include <vector>\n\
-    \nnamespace ku {\n/**\n * @brief Matrix (\u884C\u5217)\n */\ntemplate <class T>\
-    \ class Matrix {\n  private:\n    size_t h;\n    size_t w;\n    std::vector<std::vector<T>>\
+    \nnamespace kgt {\n/**\n * @brief Matrix (\u884C\u5217)\n */\ntemplate <class\
+    \ T> class Matrix {\n  private:\n    size_t h;\n    size_t w;\n    std::vector<std::vector<T>>\
     \ d;\n\n  public:\n    Matrix() noexcept : Matrix(0) {}\n    explicit Matrix(const\
     \ size_t _h) noexcept : Matrix(_h, _h) {}\n    explicit Matrix(const size_t _h,\
     \ const size_t _w) noexcept\n        : Matrix(std::vector<std::vector<T>>(_h,\
@@ -83,12 +83,12 @@ data:
     \        Matrix x = *this;\n\n        while (0 < y) {\n            if (y & 1U)\
     \ {\n                res *= x;\n            }\n\n            x *= x;\n       \
     \     y >>= 1U;\n        }\n\n        return res;\n    }\n};\n};  // namespace\
-    \ ku\n"
+    \ kgt\n"
   dependsOn: []
   isVerificationFile: false
   path: math/matrix.hpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
+  timestamp: '2024-12-16 15:57:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/math/matrix.test.cpp

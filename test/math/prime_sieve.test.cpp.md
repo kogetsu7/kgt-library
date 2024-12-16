@@ -16,7 +16,7 @@ data:
     - https://yukicoder.me/problems/no/106
   bundledCode: "#line 1 \"test/math/prime_sieve.test.cpp\"\n#define PROBLEM \"https://yukicoder.me/problems/no/106\"\
     \n\n#line 2 \"math/prime_sieve.hpp\"\n\n#include <algorithm>\n#include <array>\n\
-    #include <cassert>\n#include <utility>\n#include <vector>\n\nnamespace ku {\n\
+    #include <cassert>\n#include <utility>\n#include <vector>\n\nnamespace kgt {\n\
     /**\n * @brief Prime Sieve (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\
     )\n */\nclass PrimeSieve {\n  private:\n    std::vector<unsigned> d;\n    std::vector<unsigned>\
     \ p;\n\n  public:\n    PrimeSieve() noexcept : PrimeSieve(0) {}\n    PrimeSieve(const\
@@ -43,16 +43,16 @@ data:
     \n                for (unsigned j = 0; j < te.second; j++) {\n               \
     \     m *= te.first;\n                    res.emplace_back(res[i] * m);\n    \
     \            }\n            }\n        }\n\n        std::sort(res.begin(), res.end());\n\
-    \n        return res;\n    }\n};\n};  // namespace ku\n#line 4 \"test/math/prime_sieve.test.cpp\"\
+    \n        return res;\n    }\n};\n};  // namespace kgt\n#line 4 \"test/math/prime_sieve.test.cpp\"\
     \n\n#include <iostream>\n\nint main() {\n    int N, K;\n    std::cin >> N >> K;\n\
-    \n    ku::PrimeSieve ps(N);\n\n    int ans = 0;\n    for (int i = 2; i <= N; i++)\
-    \ {\n        auto pf = ps.prime_factors(i);\n\n        if (K <= static_cast<int>(pf.size()))\
+    \n    kgt::PrimeSieve ps(N);\n\n    int ans = 0;\n    for (int i = 2; i <= N;\
+    \ i++) {\n        auto pf = ps.prime_factors(i);\n\n        if (K <= static_cast<int>(pf.size()))\
     \ {\n            ans++;\n        }\n    }\n\n    std::cout << ans << \"\\n\";\n\
     \n    return 0;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/106\"\n\n#include \"../../math/prime_sieve.hpp\"\
     \n\n#include <iostream>\n\nint main() {\n    int N, K;\n    std::cin >> N >> K;\n\
-    \n    ku::PrimeSieve ps(N);\n\n    int ans = 0;\n    for (int i = 2; i <= N; i++)\
-    \ {\n        auto pf = ps.prime_factors(i);\n\n        if (K <= static_cast<int>(pf.size()))\
+    \n    kgt::PrimeSieve ps(N);\n\n    int ans = 0;\n    for (int i = 2; i <= N;\
+    \ i++) {\n        auto pf = ps.prime_factors(i);\n\n        if (K <= static_cast<int>(pf.size()))\
     \ {\n            ans++;\n        }\n    }\n\n    std::cout << ans << \"\\n\";\n\
     \n    return 0;\n}\n"
   dependsOn:
@@ -60,7 +60,7 @@ data:
   isVerificationFile: true
   path: test/math/prime_sieve.test.cpp
   requiredBy: []
-  timestamp: '2024-12-16 15:18:39+09:00'
+  timestamp: '2024-12-16 15:57:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/math/prime_sieve.test.cpp

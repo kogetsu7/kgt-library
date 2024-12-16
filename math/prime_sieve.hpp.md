@@ -15,7 +15,7 @@ data:
     links: []
   bundledCode: "#line 2 \"math/prime_sieve.hpp\"\n\n#include <algorithm>\n#include\
     \ <array>\n#include <cassert>\n#include <utility>\n#include <vector>\n\nnamespace\
-    \ ku {\n/**\n * @brief Prime Sieve (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\
+    \ kgt {\n/**\n * @brief Prime Sieve (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\
     \u306E\u7BE9)\n */\nclass PrimeSieve {\n  private:\n    std::vector<unsigned>\
     \ d;\n    std::vector<unsigned> p;\n\n  public:\n    PrimeSieve() noexcept : PrimeSieve(0)\
     \ {}\n    PrimeSieve(const size_t _n) noexcept : d(_n + 1), p() {\n        for\
@@ -42,9 +42,9 @@ data:
     \ j = 0; j < te.second; j++) {\n                    m *= te.first;\n         \
     \           res.emplace_back(res[i] * m);\n                }\n            }\n\
     \        }\n\n        std::sort(res.begin(), res.end());\n\n        return res;\n\
-    \    }\n};\n};  // namespace ku\n"
+    \    }\n};\n};  // namespace kgt\n"
   code: "#pragma once\n\n#include <algorithm>\n#include <array>\n#include <cassert>\n\
-    #include <utility>\n#include <vector>\n\nnamespace ku {\n/**\n * @brief Prime\
+    #include <utility>\n#include <vector>\n\nnamespace kgt {\n/**\n * @brief Prime\
     \ Sieve (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9)\n */\nclass PrimeSieve\
     \ {\n  private:\n    std::vector<unsigned> d;\n    std::vector<unsigned> p;\n\n\
     \  public:\n    PrimeSieve() noexcept : PrimeSieve(0) {}\n    PrimeSieve(const\
@@ -71,12 +71,12 @@ data:
     \n                for (unsigned j = 0; j < te.second; j++) {\n               \
     \     m *= te.first;\n                    res.emplace_back(res[i] * m);\n    \
     \            }\n            }\n        }\n\n        std::sort(res.begin(), res.end());\n\
-    \n        return res;\n    }\n};\n};  // namespace ku\n"
+    \n        return res;\n    }\n};\n};  // namespace kgt\n"
   dependsOn: []
   isVerificationFile: false
   path: math/prime_sieve.hpp
   requiredBy: []
-  timestamp: '2024-12-15 14:14:20+09:00'
+  timestamp: '2024-12-16 15:57:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/math/prime_sieve.test.cpp
